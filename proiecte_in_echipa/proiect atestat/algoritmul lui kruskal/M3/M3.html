@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>M3</title>
+    <link href="stiluri.css" rel="stylesheet" type="text/css" />
+    <link href="../template/stiluri_module.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    <header>Simulare</header>
+    
+    <nav>
+      <ul class="navList">
+          <li><a href="../M1/M1.html">M1</a><div>Introducere</div></li>
+          <li><a href="../M2/M2.html">M2</a><div>Modelare</div></li>
+          <li><a href="M3.html" class="present">M3</a><div>Simulare</div></li>
+          <li><a href="../M4/M4.html">M4</a><div>Algoritm</div></li>
+          <li><a href="../M5/M5.html">M5</a><div>Reprezentare informații</div></li>
+          <li><a href="../M6/M6.html">M6</a><div>Implementare</div></li>
+          <li><a href="../M7/M7.html">M7</a><div>Evaluare</div></li>
+          <li style="float:right; border:none"><a class="active" href="../index.html">Acasă</a></li>
+		</ul>
+	</nav>
+    
+	<table class="t">
+		<tr>
+			<td style="width:70%; padding-left:20px; padding-right:60px">
+                <p1 id="text0" class="text0">
+                    Considerăm graful <b>G</b> cu <b>n</b>=5 vârfuri un <r>graf neorientat conex</r>, iar costul fiecărei muchii din graf un număr real pozitiv. Definim costul unui arbore parţial drept suma costurilor muchiilor arborelui.<br>Pentru a determina <r>aborele parțial de cost minim</r>, pornim de la o pădure formată din <b>n</b> subarbori, reprezentați de către vârfurile grafului. Aceștia vor fi uniți succesiv prin muchii, până când se obține un singur arbore.<br>La fiecare pas se selectează o muchie de cost minim care <r>nu</r> a mai fost selectată şi care <r>nu</r> formează cicluri cu muchiile deja selectate.
+                </p1> 
+            </td>
+            <td>
+                <table>
+                    <tr><div class="slider"><div class="img-box"><img src="img/graf.png" alt="graf" class="slider-img"></div></div></tr>
+                    <tr>
+                        <th style="padding-left:130px">
+                            <button id="btn_prev" class="btn" onclick="prev()"><img src="../template/img/prev.jpg" height="20px"></button>
+                            <button id="btn_next" class="btn" onclick="next()"><img src="../template/img/next.jpg" height="20px"></button>
+                        </th>
+                    </tr>
+                    <script src="main.js"></script>
+                    <script>document.getElementById("btn_prev").addEventListener("click", toggleTextPrev)</script>
+                    <script>document.getElementById("btn_next").addEventListener("click", toggleTextNext)</script>
+                </table>
+            </td>
+		</tr>
+        <tr>
+        	
+        </tr>
+    </table>
+    
+    <div class="dropdown">
+    	<img src='../template/img/buton_info.jpg' alt='buton_info' height="30">
+        <div class="dropdown-content">
+			<table>
+            	<tr height="285px">
+                	<td class="desc">Descrierea pasului curent</td>
+                    <td class="img">Imagine ilustratoare</b></td>
+            	</tr>
+                <tr>
+                    <table align="right" style="padding-right:7px">
+                        <tr>
+                            <td class="ant">Pasul anterior</td>
+                            <td class="urm">Pasul următor</td>
+                        </tr>
+                    </table>
+                </tr>
+             </table>	
+         </div>
+     </div>
+</body>
+
+</html>

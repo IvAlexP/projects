@@ -1,0 +1,83 @@
+/*QUIZ*/
+
+.option-block-container
+{
+	max-width: 1000px;
+	display: inline-block;
+}
+
+.option-block
+{
+	padding: 10px;
+	background: aliceblue;
+	border: 1px solid #84c5fe;
+	margin-bottom: 10px;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.rez
+{
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+.raspuns
+{
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-top: 1px;
+	border-top-color: #000;
+	border-top-style: solid;
+}
+
+.c-wrong
+{
+	margin-left: 20px;
+	color: #ff0000;
+}
+
+.c-correct
+{
+	margin-left: 20px;
+	color: green;
+}
+
+.btn
+{
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+.btn:hover
+{
+	box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 5px 5px 0 rgba(0,0,0,0.19);
+}
+
+/*BUTON INFORMAȚII*/
+
+.dropdown
+{
+	position: relative;
+	display: inline-block;
+	left: 50%;
+}
+
+.dropdown-content
+{
+	
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown-content
+{
+	display: block;
+	left: -548px;
+	top: -365px;
+}

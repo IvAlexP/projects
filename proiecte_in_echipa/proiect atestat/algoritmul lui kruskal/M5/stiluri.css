@@ -1,0 +1,64 @@
+p1
+{
+	line-height: 2;
+	text-align: justify;
+	float: left;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-top: 10px;
+	width: 100%;
+}
+
+/*BUTON INFORMAȚII*/
+
+.dropdown
+{
+	position: relative;
+	display: inline-block;
+	left: 50%;
+}
+
+.dropdown-content
+{
+	display: none;
+	position: absolute;
+	background-color: rgba(250, 250, 250, 0.85);
+	width: 1070px;
+	height: 375px;
+	padding: 8px 10px;
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown-content
+{
+ 	display: block;
+	left: -550px;
+	top: -398px;
+}
+
+/*EXPLICATII*/
+
+.exp
+{
+	padding: 10px;
+	width: 570px;
+	border-color: #4E4E4E;
+	border-width: 2px;
+	border-style: solid;
+	border-right: none;
+	border-bottom: none;
+	float: left;
+	font-size: 20px;
+}
+
+.cod
+{
+	padding: 10px;
+	width: 450px;
+	float: right;
+	border-color: #4E4E4E;
+	border-width: 2px;
+	border-style: solid;
+	border-bottom: none;
+	font-size: 20px;
+}

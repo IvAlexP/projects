@@ -1,0 +1,75 @@
+p
+{
+	text-align: left;
+	font-family: "Verdana";
+	font-size: 14px;
+}
+
+p1
+{
+	line-height: 2;
+	text-align: left;
+	float: left;
+	font-size: 14px;
+	margin-left: 8px;
+	margin-top: 10px;
+	width: 100%;
+}
+
+exp
+{
+	color:#F00;
+	font-weight:bold;
+	text-decoration:underline;
+	text-decoration-color:#F00;
+}
+
+/*CASUTA EXPLICATIVA*/
+
+.dropdownInfo
+{
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-contentInfo
+{
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	width: 230px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 8px 10px;
+	text-align:left;
+	z-index: 1;
+}
+
+.dropdownInfo:hover .dropdown-contentInfo
+{
+ 	display: block;
+}
+
+/*BUTON INFORMAȚII*/
+
+.dropdown
+{
+	position: relative;
+	display: inline-block;
+	left: 50%;
+}
+
+.dropdown-content
+{
+	
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown-content
+{
+    display: block;
+    left: -547px;
+    top: -405px;
+}
