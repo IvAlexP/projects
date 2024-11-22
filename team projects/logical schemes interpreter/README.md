@@ -7,7 +7,7 @@ This project aimed to give the user an interface in which to create, edit, check
 ## Getting started
 ### Installing
 You are going to need an integrated development environment (IDE).  
-I used **Code::Blocks** with MinGW included: [setup.exe](https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe/download)  
+I used **Code::Blocks** with **MinGW** included: [setup.exe](https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe/download)  
 Download and click on the setup to run it. Click **ok** until the download is finished.
 
 ### Create a new project
