@@ -15,7 +15,7 @@ Download and click on the setup to run it. Click **ok** until the download is fi
     * you may find it on the desktop or you can search for it in the search bar
 2. Click on **Create a new project**
 3. Double click on **Console application**
-4. Select C++ and click on **Next**
+4. Select **C++** and click on **Next**
 5. Select a **Project name** and the location for the project, then click on **Next**
 6. The **Compiler** should be **GNU GCC Compiler**
 7. Click **Finish**
