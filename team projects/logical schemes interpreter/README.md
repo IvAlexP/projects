@@ -42,10 +42,10 @@ There are a few files to be included in the folder of the project:
 2. Download [schema_salvata.txt](schema_salvata.txt)
 3. Download the folders:
     * *[headers](headers)*
-        * [winbgim.h](headers/winbgim.h)
-        * [graphics.h](headers/graphics.h)
+        * *winbgim.h*
+        * *graphics.h*
     * *[lib](lib)*
-        * [libgdi32.a](lib/libgdi32.a)
+        * *libgdi32.a*
 4. Add the 2 headers to your project:
     * click **Project** on the top meniu
     * click **Add files..**
