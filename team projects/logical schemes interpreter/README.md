@@ -49,7 +49,8 @@ There are a few files to be included in the folder of the project:
 4. Add the 2 headers to your project:
     * click **Project** on the top meniu
     * click **Add files..**
-    * select the files from the folder of your project.
+    * select the files **winbgim.h** and **graphics.h** from the folder of your project
+    * click **ok** to save the changes
 5. Link the lib file:
     * click **Project** on the top meniu
     * click **Build options**
