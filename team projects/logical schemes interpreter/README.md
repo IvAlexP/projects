@@ -66,7 +66,3 @@ You can either click on the **Build and run** button on the top meniu or press *
 ******* de adaugat **********
 
 Watch the [Presentation video](<Interschem presentation.mp4>) for a better understanding of the way the Logical Scheme Interpretator should be used.
-<video width="640" height="360" controls>
-    <source src="Interschem presentation.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
