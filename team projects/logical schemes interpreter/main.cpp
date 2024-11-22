@@ -1,13 +1,13 @@
+#include "headers/graphics.h"
+#include "headers/winbgim.h"
+
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include "headers/graphics.h"
-#include "headers/winbgim.h"
 #include <cmath>
 #include <dos.h>
 #include <string.h>
 #include <windows.h>
-#include <stdlib.h>
 #include <math.h>
 #include <limits.h>
 
