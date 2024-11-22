@@ -65,4 +65,4 @@ You can either click on the **Build and run** button on the top meniu or press *
 ## Usage
 ******* de adaugat **********
 
-Watch the **[Presentation video](<Interschem presentation.mkv>)** for a better understanding of the way the Logical Scheme Interpretator should be used.
+Watch the **[Presentation video](<Interschem presentation.mp4>)** for a better understanding of the way the Logical Scheme Interpretator should be used.
