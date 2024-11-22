@@ -1,11 +1,11 @@
 #include <iostream>
 #include <stdio.h>
-#include <winbgim.h>
-#include <graphics.h>
+#include <stdlib.h>
+#include "headers/graphics.h"
+#include "headers/winbgim.h"
 #include <cmath>
 #include <dos.h>
 #include <string.h>
-#include <graphics.h>
 #include <windows.h>
 #include <stdlib.h>
 #include <math.h>
@@ -3526,23 +3526,28 @@ void executare_schema()
                 {
                     valoare=Evaluare(blocuri.afisare[nr_bloc].text);
                     strcpy(t, "Valoarea afisata este ");
-                    if (int(valoare)==valoare)
-                        itoa(valoare, s, 10);
+                    if (int(valoare) == valoare)
+                    {
+                        sprintf(s, "%d", (int)valoare);
+                    }
                     else
                     {
-                        int val=int(valoare*100);
-                        if (val<100 && val>0)
+                        int val = int(valoare * 100);
+                        if (val < 100 && val > 0)
                         {
-                            itoa(val, s+1, 10);
-                            s[0]='0';
+                            sprintf(s + 1, "%d", val);
+                            s[0] = '0';
                         }
-                        else if (val>-100 && val<0)
+                        else if (val > -100 && val < 0)
                         {
-                            itoa(val, s+1, 10);
-                            s[0]='-';
-                            s[1]='0';
+                            sprintf(s + 1, "%d", val);
+                            s[0] = '-';
+                            s[1] = '0';
                         }
-                        else itoa(val, s, 10);
+                        else
+                        {
+                            sprintf(s, "%d", val);
+                        }
                         int l=strlen(s); l++;
                         s[l]='\0';
                         s[l-1]=s[l-2]; s[l-2]=s[l-3]; s[l-3]='.';
@@ -3603,22 +3608,25 @@ void executare_schema()
                 t[strlen(t)]=blocuri.atribuire[nr_bloc].text[0];
                 strcpy(t+21, " valoarea ");
                 if (int(valoare)==valoare)
-                    itoa(valoare, s, 10);
+                    sprintf(s, "%d", (int)valoare);
                 else
                 {
                     int val=int(valoare*100);
                     if (val<100 && val>0)
                     {
-                        itoa(val, s+1, 10);
+                        sprintf(s+1, "%d", val);
                         s[0]='0';
                     }
                     else if (val>-100 && val<0)
                     {
-                        itoa(val, s+1, 10);
+                        sprintf(s+1, "%d", val);
                         s[0]='-';
                         s[1]='0';
                     }
-                    else itoa(val, s, 10);
+                    else
+                    {
+                        sprintf(s, "%d", val);
+                    }
                     int l=strlen(s); l++;
                     s[l]='\0';
                     s[l-1]=s[l-2]; s[l-2]=s[l-3]; s[l-3]='.';
