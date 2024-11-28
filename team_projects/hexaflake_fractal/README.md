@@ -1,17 +1,20 @@
 # Project title
-Logical Schemes Interpreter
+Hexaflake Fractal
 
 ## Description
-This project aimed to give the user an interface in which to create, edit, check, save, code and run a logical scheme by choice.
+************ to add ******************
 
 ## Getting started
 ### Installing
 You are going to need an integrated development environment (IDE).  
-I used **Code::Blocks** with **MinGW** included for **Windows**: [windows_setup](https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe/download)  
-You can also download it for a **Linux** distribution at: [linux_setup](https://www.codeblocks.org/downloads/binaries/#imagesoslinux48pnglogo-linux-32-and-64-bit)  
-Or for **MacOS**: [mac_setup](https://sourceforge.net/projects/codeblocks/files/Binaries/13.12/MacOS/CodeBlocks-13.12-mac.zip/download)
-
-Download it and click on the setup to run it. Click **ok** until the download is finished.
+I used **Code::Blocks** with **MinGW** included for **Windows**:
+[windows_setup](https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe/download).  
+You can also download it for a **Linux** distribution at:
+[linux_setup](https://www.codeblocks.org/downloads/binaries/#imagesoslinux48pnglogo-linux-32-and-64-bit).  
+Or for **MacOS** at:
+[mac_setup](https://sourceforge.net/projects/codeblocks/files/Binaries/13.12/MacOS/CodeBlocks-13.12-mac.zip/download).  
+Download it and click on the setup to run it.  
+Click **ok** until the download is finished.
 
 ### Create a new project
 1. Open **Code::Blocks**
@@ -23,9 +26,8 @@ Download it and click on the setup to run it. Click **ok** until the download is
 6. The **Compiler** should be **GNU GCC Compiler**
 7. Click **Finish**
 
-### Compiling setting
+### Compiling settings
 There are a few steps to be followed in order to prepare the environment:
-
 1. Make sure the link to MinGW is correct:
     * click on **Settings** on the top meniu
     * click on **Compiler...**
@@ -40,19 +42,19 @@ There are a few steps to be followed in order to prepare the environment:
 
 ### Dependencies
 There are a few files to be included in the folder of the project:
-
 1. Download [main.cpp](main.cpp)
 2. Download [schema_salvata.txt](schema_salvata.txt)
 3. Download the folders:
     * *[headers](headers)*
-        * *winbgim.h*
-        * *graphics.h*
+        * *winbgi2.h*
+        * *graphics2.h*
     * *[lib](lib)*
         * *libgdi32.a*
 4. Add the 2 headers to your project:
     * click **Project** on the top meniu
     * click **Add files..**
-    * select the files **winbgim.h** and **graphics.h** from the folder of your project
+    * select the files **winbgim.h** and **graphics.h**
+    from the folder of your project
     * click **ok** to save the changes
 5. Link the lib file:
     * click **Project** on the top meniu
@@ -63,9 +65,8 @@ There are a few files to be included in the folder of the project:
     * click **ok** to save the changes
 
 ### Executing program
-You can either click on the **Build and run** button on the top meniu or press **(FN+)F9**.
+You can either click on the **Build and run** button
+on the top meniu or press **(FN+)F9**.
 
 ## Usage
-******* de adaugat **********
-
-Watch the [video presentation](<presentation.mkv>) for a better understanding of the way the Logical Scheme Interpretator should be used.
+************ to add ******************
