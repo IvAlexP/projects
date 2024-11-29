@@ -2,8 +2,7 @@
 Logical Schemes Interpreter
 
 ## Description
-This project aims to give the user an interface in which to 
-create, edit, check, save, code and run a logical scheme by choice.
+This project aims to give the user an interface in which to create, edit, check, save, code and run a logical scheme by choice.
 
 ## Getting started
 ### Installing
@@ -66,34 +65,18 @@ There are a few files to be included in the folder of the project:
     * click **ok** to save the changes
 
 ### Executing program
-You can either click on the **Build and run** button
-on the top meniu or press **(FN+)F9**.
+You can either click on the **Build and run** button on the top meniu or press **(FN+)F9**.
 
 ## Usage
-### The left meniu
-You can draw the logical scheme on the provided display
-by selecting shapes from the meniu on the left side of
-screen for commands such as *start*, *finish*, *start if*,
-*end if*, *read*, *write* and *attribute*. The shapes
-can be moved on the display by clicking on them and then
-on their new position. They should be connected by double-clicking on them.
+### The left menu
+You can draw the logical scheme on the provided display by selecting shapes from the meniu on the left side of screen for commands such as *start*, *finish*, *start if*, *end if*, *read*, *write* and *attribute*. The shapes can be moved on the display by clicking on them and then on their new position. They should be connected by double-clicking on them.
 
-### The down meniu
-On the down side of the screen, there are several buttons
-which provide options for the user - *new sheme*, *save scheme*,
-*open scheme* and *run*.  
-Should the *run* button be clicked on, the program checks for
-possible errors in the syntax of the logical scheme. Afterwards,
-the C++ codification of the logical scheme is displayed on the
-down-right side of the screen. Following this, the top-right
-side of the screen displays a step-by-step running through the scheme while
-highlighting the correspondent shape on the display. 
+### The down menu
+On the down side of the screen, there are several buttons which provide options for the user - *new sheme*, *save scheme*, *open scheme* and *run*.  
+Should the *run* button be clicked on, the program checks for possible errors in the syntax of the logical scheme. Afterwards, the C++ codification of the logical scheme is displayed on the down-right side of the screen. Following this, the top-right side of the screen displays a step-by-step running through the scheme while highlighting the correspondent shape on the display. 
 
 ### The information button
-On the down left corner of the screen there is an *information button*.
-By clicking on it at any given moment, a new window pops up with
-further information regarding the usage of the program.
+On the down left corner of the screen there is an *information button*. By clicking on it at any given moment, a new window pops up with further information regarding the usage of the program.
 
 ### Further information
-Watch the [video presentation](<presentation.mkv>) for a better
-understanding of the way the Logical Scheme Interpretator should be used.
+Watch the [video presentation](<presentation.mkv>) for a better understanding of the way the Logical Scheme Interpretator should be used.

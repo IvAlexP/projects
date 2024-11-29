@@ -65,8 +65,7 @@ There are a few files to be included in the folder of the project:
     * click **ok** to save the changes
 
 ### Executing program
-You can either click on the **Build and run** button
-on the top meniu or press **(FN+)F9**.
+You can either click on the **Build and run** button on the top meniu or press **(FN+)F9**.
 
 ## Usage
 ************ to add ******************
