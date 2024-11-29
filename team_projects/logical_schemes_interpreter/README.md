@@ -29,13 +29,13 @@ Click **ok** until the download is finished.
 ### Compiling settings
 There are a few steps to be followed in order to prepare the environment:
 1. Make sure the link to MinGW is correct:
-    * click on **Settings** on the top meniu
+    * click on **Settings** on the top menu
     * click on **Compiler...**
     * click on **Toolchain executables**
     * click on **Auto-detect**
     * make sure the link is something like **C:\Program Files\CodeBlocks\MinGW**
 2. Select the right version of the compiler:
-    * click on **Settings** on the top meniu
+    * click on **Settings** on the top menu
     * click on **Compiler...**
     * select the **g++ [std=c++11]** version
     * click **ok** to save the changes
@@ -51,13 +51,13 @@ There are a few files to be included in the folder of the project:
     * *[lib](lib)*
         * *libgdi32.a*
 4. Add the 2 headers to your project:
-    * click **Project** on the top meniu
+    * click **Project** on the top menu
     * click **Add files..**
     * select the files **winbgim.h** and **graphics.h**
     from the folder of your project
     * click **ok** to save the changes
 5. Link the lib file:
-    * click **Project** on the top meniu
+    * click **Project** on the top menu
     * click **Build options**
     * click **Linker settings**
     * click **add**
@@ -65,11 +65,11 @@ There are a few files to be included in the folder of the project:
     * click **ok** to save the changes
 
 ### Executing program
-You can either click on the **Build and run** button on the top meniu or press **(FN+)F9**.
+You can either click on the **Build and run** button on the top menu or press **(FN+)F9**.
 
 ## Usage
 ### The left menu
-You can draw the logical scheme on the provided display by selecting shapes from the meniu on the left side of screen for commands such as *start*, *finish*, *start if*, *end if*, *read*, *write* and *attribute*. The shapes can be moved on the display by clicking on them and then on their new position. They should be connected by double-clicking on them.
+You can draw the logical scheme on the provided display by selecting shapes from the menu on the left side of screen for commands such as *start*, *finish*, *start if*, *end if*, *read*, *write* and *attribute*. The shapes can be moved on the display by clicking on them and then on their new position. They should be connected by double-clicking on them.
 
 ### The down menu
 On the down side of the screen, there are several buttons which provide options for the user - *new sheme*, *save scheme*, *open scheme* and *run*.  
