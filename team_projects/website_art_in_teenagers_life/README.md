@@ -22,7 +22,7 @@ You should have 1 *css* file:
 You should also download the [multimedia](multimedia) folder.
 
 ### Executing program
-Open the [index.html](index.html) in a browser:  
+Open the *index.html* in a browser:  
 * right click on it
 * click *Open with...*
 * select a browser of your choice (e.g. Google Chrome) 
