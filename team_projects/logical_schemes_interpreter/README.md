@@ -2,7 +2,10 @@
 Logical Schemes Interpreter
 
 ## Description
-This project aims to give the user an interface in which to create, edit, check, save, code and run a logical scheme by choice.
+This project aims to give the user an interface in which to create, edit, check, save, run and code in C++ a logical scheme by choice.
+
+## Programming languages
+C/C++
 
 ## Getting started
 ### Installing
@@ -18,7 +21,6 @@ Click **ok** until the download is finished.
 
 ### Create a new project
 1. Open **Code::Blocks**
-    * you may find it on the desktop or you can search for it in the search bar
 2. Click on **Create a new project**
 3. Double click on **Console application**
 4. Select **C++** and click on **Next**
@@ -41,28 +43,29 @@ There are a few steps to be followed in order to prepare the environment:
     * click **ok** to save the changes
 
 ### Dependencies
-There are a few files to be included in the folder of the project:
-1. Download [main.cpp](main.cpp)
+There are a few files to be included in the folder of the project from the folder [dependencies](dependencies):
+1. Replace the *main.cpp* file with [main.cpp](main.cpp)
 2. Download [schema_salvata.txt](schema_salvata.txt)
 3. Download the folders:
-    * *[headers](headers)*
+    * [headers](headers)
         * *winbgim.h*
         * *graphics.h*
-    * *[lib](lib)*
+    * [lib](lib)
         * *libgdi32.a*
-4. Add the 2 headers to your project:
-    * click **Project** on the top menu
-    * click **Add files..**
-    * select the files **winbgim.h** and **graphics.h**
-    from the folder of your project
-    * click **ok** to save the changes
-5. Link the lib file:
+4. Link the lib file:
     * click **Project** on the top menu
     * click **Build options**
     * click **Linker settings**
     * click **add**
     * select the file **libgdi32.a** from the **lib** folder
     * click **ok** to save the changes
+5. Add the 2 headers to your project:
+    * click **Project** on the top menu
+    * click **Add files..**
+    * select the files **winbgim.h** and **graphics.h**
+    from the folder of your project
+    * click **ok** to save the changes
+
 
 ### Executing program
 You can either click on the **Build and run** button on the top menu or press **(FN+)F9**.

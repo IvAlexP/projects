@@ -39,13 +39,13 @@ void fractal(int midx, int midy, int L)
                        midx-L,   midy};
         if (nr%2==1)
         {
-            setcolor(CYAN); fillpoly(7, hex); ///umplere hexagon
-            setcolor(MAGENT); drawpoly(7, hex); ///contur hexagon
+            setcolor(CYAN); fillpoly(7, hex);
+            setcolor(MAGENT); drawpoly(7, hex);
         }
         else
         {
-            setcolor(RED); fillpoly(7, hex); ///umplere hexagon
-            setcolor(YELLOW); drawpoly(7, hex); ///contur hexagon
+            setcolor(RED); fillpoly(7, hex);
+            setcolor(YELLOW); drawpoly(7, hex);
         }
     }
     else
