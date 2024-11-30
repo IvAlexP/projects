@@ -43,12 +43,12 @@ There are a few steps to be followed in order to prepare the environment:
     * click **ok** to save the changes
 
 ### Dependencies
-There are a few files to be included in the folder of the project from the folder [dependencies](dependencies):
-1. Replace the *main.cpp* file with [main.cpp](main.cpp)
+There are a few files to be included in the folder of the project:
+1. Replace the *main.cpp* file from the folder of the project with [main.cpp](src/main.cpp)
 2. Download the files:
     * [winbgi2.cpp](dependencies/winbgi2.cpp)
-    * [graphics2.h](dependencies/graphics2.h)
-    * [libgdi32.a](dependencies/libgdi32.a)
+    * [graphics2.h](headers/graphics2.h)
+    * [libgdi32.a](lib/libgdi32.a)
 3. Link the lib file:
     * click **Project** on the top menu
     * click **Build options**
@@ -90,3 +90,6 @@ setcolor(YELLOW); drawpoly(7, hex);
 ```
 
 You can find other colours at [setcolor.html](https://home.cs.colorado.edu/~main/bgi/doc/setcolor.html).
+
+## Further information
+Read the [documentation](documentation.pptx) for an inside into the working process.

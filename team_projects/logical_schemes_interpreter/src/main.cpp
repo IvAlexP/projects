@@ -1,5 +1,5 @@
-#include "headers/graphics.h"
-#include "headers/winbgim.h"
+#include "graphics.h"
+#include "winbgim.h"
 
 #include <iostream>
 #include <stdio.h>

@@ -43,23 +43,21 @@ There are a few steps to be followed in order to prepare the environment:
     * click **ok** to save the changes
 
 ### Dependencies
-There are a few files to be included in the folder of the project from the folder [dependencies](dependencies):
-1. Replace the *main.cpp* file with [main.cpp](main.cpp)
-2. Download [schema_salvata.txt](schema_salvata.txt)
-3. Download the folders:
-    * [headers](headers)
-        * *winbgim.h*
-        * *graphics.h*
-    * [lib](lib)
-        * *libgdi32.a*
-4. Link the lib file:
+There are a few files to be included in the folder of the project:
+1. Replace the *main.cpp* file from the folder of the project with [main.cpp](src/main.cpp)
+2. Download the files:
+    * [schema_salvata.txt](dependencies/schema_salvata.txt)
+    * [winbgim.h](headers/winbgim.h)
+    * [graphics.h](headers/graphics.h)
+    * [libgdi32.a](lib/libgdi32.a)
+3. Link the lib file:
     * click **Project** on the top menu
     * click **Build options**
     * click **Linker settings**
     * click **add**
     * select the file **libgdi32.a** from the **lib** folder
     * click **ok** to save the changes
-5. Add the 2 headers to your project:
+4. Add the 2 headers to your project:
     * click **Project** on the top menu
     * click **Add files..**
     * select the files **winbgim.h** and **graphics.h**
@@ -72,7 +70,7 @@ You can either click on the **Build and run** button on the top menu or press **
 
 ## Usage
 ### The left menu
-You can draw the logical scheme on the provided display by selecting shapes from the menu on the left side of screen for commands such as *start*, *finish*, *start if*, *end if*, *read*, *write* and *attribute*. The shapes can be moved on the display by clicking on them and then on their new position. They should be connected by double-clicking on them.
+You can draw the logical scheme on the provided display by selecting shapes from the menu on the left side of screen for commands such as *start*, *finish*, *start if*, *end if*, *read*, *write* and *attribute*. The shapes can be moved on the display by left clicking on them and then on their new position. You can delete a shape by right clicking on it. All shapes should be connected by double-clicking on two of them consecutively.
 
 ### The down menu
 On the down side of the screen, there are several buttons which provide options for the user - *new sheme*, *save scheme*, *open scheme* and *run*.  
