@@ -1,0 +1,53 @@
+begin_classes
+clasa animal
+{
+	public:
+		int x = 3;
+		int v[10];
+		int f()
+		{
+			int x;
+			return x;
+		}
+		
+}
+end_classes
+
+
+begin_variables
+animal B;
+end_variables
+
+
+begin_functions
+int f(bool c)
+{
+	int x;
+	return x;
+}
+end_functions
+
+
+begin_main
+int a;
+a = f();
+bool b = true;
+Print(b);
+int v[10];
+animal vaca;
+Print(vaca.x);
+TypeOf(vaca);
+Print(b == true && !(b == true));
+bool ok = b == true && !(b == true);
+Print("ok este ");
+Print(ok);
+if (f(b) == 2)
+{
+	Print("asta");
+}
+int i = 0;
+for (i = 0; i < 5; i++)
+{
+	Print("for");
+}
+end_main

@@ -1,0 +1,55 @@
+begin_classes
+clasa A
+{  
+        int x = 111;
+        int y = 222;
+        int g(int z)
+        {
+                z = z + 3;
+               
+               
+        }
+}
+
+clasa B
+{
+        float x;
+}       
+end_classes
+
+begin_variables
+A oba;
+B obb;
+int x = 60;
+int ix = 10;
+int iy = 900;
+int iz = 30;
+bool b1 = true;
+float fx = 6.5;
+string s = "string";
+char  c = 'x';
+int v[10];
+end_variables
+
+begin_functions
+float g (int z)
+{
+       int x; 
+}
+
+int f (int z)
+{
+        return 3;
+}                   
+
+int bfunc(bool b, string s, float f)
+{
+        return 100;
+}
+end_functions
+
+
+begin_main
+TypeOf(oba.x + obb.x);
+end_main
+
