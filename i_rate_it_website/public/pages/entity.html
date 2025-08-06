@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>    
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Entity</title>
+    <link rel="icon" type="image/x-icon" href="/IRI_LilKartoffel/public/favicon.ico">
+    <link rel="stylesheet" href="/IRI_LilKartoffel/public/css/buttons.css" /><link rel="stylesheet" href="/IRI_LilKartoffel/public/css/header.css" />
+    <link rel="stylesheet" href="/IRI_LilKartoffel/public/css/entity.css" />    
+    <script src="/IRI_LilKartoffel/public/js/cookie-manager.js"></script>
+
+    <script src="/IRI_LilKartoffel/public/js/jwt-manager.js"></script>
+    <script src="/IRI_LilKartoffel/public/js/header.js"></script>
+
+    <script src="/IRI_LilKartoffel/public/js/entity.js"></script>
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <div class="entity"></div>
+    <div class="comments">
+      <div class="comments-header">
+        <h2>Comments</h2>
+        <button id="show-review-form-btn" class="action-btn-base action-btn">
+          Write a Review
+        </button>
+      </div>
+      <div class="comment-form" id="comment-form" style="display: none">
+        <div class="review-form-container">
+          <h3>Write a Review</h3>
+          <div class="review-form-main">
+            <div class="description-container">
+              <label for="comment-text">Description:</label>
+              <textarea
+                id="comment-text"
+                placeholder="Write your review here..."
+                maxlength="1000"
+                required
+              ></textarea>
+              <div class="character-count">
+                <span id="char-count">0</span>/1000 characters
+              </div>
+            </div>
+            <div class="form-second-row">
+              <div class="traits-rating-container">
+                <div id="traits-list"></div>
+              </div>
+            </div>
+            <div class="pictures-upload-container">
+              <div class="pictures-header">
+                <button type="button" id="upload-btn" class="action-btn-base action-btn-secondary">
+                  Add Pictures (Optional)
+                </button>
+              </div>
+              <div class="upload-area">
+                <input
+                  type="file"
+                  id="picture-upload"
+                  accept="image/*"
+                  multiple
+                  style="display: none"
+                />
+                <div id="preview-container" class="preview-container"></div>
+              </div>
+            </div>
+          </div>
+          <div class="review-form-actions">            <button
+              id="submit-comment-button"
+              class="action-btn-base action-btn disabled-style"
+            >
+              Submit
+            </button>
+            <button
+              id="cancel-review-btn"
+              class="action-btn-base action-btn-secondary"
+              type="button"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="review-controls">
+        <div class="rating-filter-control">
+          <label for="rating-filter">Filter by rating:</label>
+          <select id="rating-filter">
+            <option value="all">All ratings</option>
+            <option value="5">5 stars</option>
+            <option value="4">4 stars</option>
+            <option value="3">3 stars</option>
+            <option value="2">2 stars</option>
+            <option value="1">1 star</option>
+          </select>
+        </div>
+
+        <div class="image-filter-control">
+          <label for="image-filter">Filter by images:</label>
+          <select id="image-filter">
+            <option value="all">All reviews</option>
+            <option value="with-images">With images only</option>
+            <option value="no-images">No images only</option>
+          </select>
+        </div>
+
+        <div class="sort-control">
+          <label for="sort-by">Sort by:</label>
+          <select id="sort-by">
+            <option value="date-desc">Newest first</option>
+            <option value="date-asc">Oldest first</option>
+            <option value="rating-desc">Highest rated</option>
+            <option value="rating-asc">Lowest rated</option>
+            <option value="helpful-desc">Most helpful</option>
+            <option value="helpful-asc">Least helpful</option>
+          </select>
+        </div>
+
+        <div class="search-control">
+          <label for="review-search">Search reviews:</label>
+          <input
+            type="text"
+            id="review-search"
+            placeholder="Search in reviews..."
+          />
+        </div>
+      </div>
+
+      <div class="comments-list"></div>
+    </div>
+  </body>
+</html>

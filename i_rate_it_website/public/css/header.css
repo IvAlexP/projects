@@ -1,0 +1,70 @@
+.logo {
+  height: 40px;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  grid-template-columns: 50px minmax(200px, 1fr) 100px 100px;
+  grid-template-areas: "logo empty register login";
+  align-items: center;
+  gap: 20px;
+  padding: 20px 10%;
+  transition: all 0.3s ease;
+}
+
+.colour-nav {
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+div.container>div button {
+  width: 100%;
+}
+
+div.container>div:nth-child(1) {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+}
+
+div.container>div:nth-child(2) {
+  grid-area: empty;
+}
+
+div.container>div:nth-child(3) {
+  grid-area: register;
+  display: block;
+}
+
+div.container>div:nth-child(4) {
+  grid-area: login;
+  display: block;
+}
+
+/* Asigură display block pentru butoanele de autentificare */
+#auth-register, #auth-login {
+  display: block;
+}
+
+@media (max-width: 780px) {
+  div.container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "logo register login"
+      "empty empty empty";
+  }
+}
+
+@media (max-width: 500px) {
+  div.container {
+    grid-template-columns: 120px auto;
+    grid-template-areas:
+      "logo register"
+      "empty login"
+      "empty empty";
+    gap: 10px;
+  }
+}

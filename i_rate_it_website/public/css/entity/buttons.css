@@ -1,0 +1,130 @@
+/* Interactive buttons and controls */
+.vote-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Base vote button - shared styles */
+.vote-btn-base,
+.vote-btn {
+  background-color: white;
+  border-radius: 10px;
+  padding: 0.3rem 1rem;
+  min-width: 0;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.like-btn {
+  border-color: #206e57;
+  color: #206e57;
+}
+
+.like-btn:hover {
+  background-color: #f0f8f5;
+  transform: translateY(-1px);
+}
+
+.like-btn.active {
+  background-color: #206e57;
+  color: white;
+}
+
+.dislike-btn {
+  border-color: red;
+  color: red;
+}
+
+.dislike-btn:hover {
+  background-color: #fdf2f2;
+  transform: translateY(-1px);
+}
+
+.dislike-btn.active {
+  background-color: red;
+  color: white;
+}
+
+/* Show more button - for expanding content */
+.show-more-btn {
+  background-color: transparent;
+  color: #206e57;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.show-more-btn:hover {
+  text-decoration: none;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Base action button - shared styles */
+.action-btn-base {
+  border: none;
+  padding: 0.3rem 1rem;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+  border-radius: 18px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+/* Primary action button - for reply, submit */
+.action-btn {
+  background: #BAD1CA;
+  color: black;
+}
+
+.action-btn:hover {
+  background: #A0C8B7;
+  transform: translateY(-1px);
+}
+
+.action-btn.disabled-style:hover {
+  transform: none;
+  background: #BAD1CA;
+}
+
+/* Secondary action button - for cancel, show replies, etc. */
+.action-btn-secondary {
+  background-color: white;
+  color: #206e57;
+  border: 2px solid #BAD1CA;
+}
+
+.action-btn-secondary:hover {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
+}
+
+/* Delete image button - square X button positioned under images */
+.delete-image-btn {
+  background-color: #cbcdce;
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px auto 0 auto;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.delete-image-btn:hover {
+  background-color: #bac4bb;
+  transform: scale(1.01);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

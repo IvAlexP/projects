@@ -1,0 +1,126 @@
+.manage-accounts-container {
+  width: 90%;
+  margin: 20px auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: none;
+  text-align: center;
+}
+
+.manage-accounts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #bad1ca;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.manage-accounts-header h3 {
+  margin: 0;
+}
+
+.accounts-header-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr 80px;
+  background: #bad1ca;
+  padding: 12px;
+  font-weight: bold;
+  color: #333;
+  border-radius: 4px;
+}
+
+.accounts-list {
+  margin-top: 10px;
+}
+
+.account-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr 80px;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 4px;
+}
+
+.account-cell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.action-cell {
+  text-align: center;
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  border: 1px solid #4a8175;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.loading-row,
+.no-accounts-row,
+.error-row {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  color: #555;
+}
+
+@media (max-width: 780px) {
+  .manage-accounts-container {
+    width: 80%;
+  }
+
+  .accounts-header-row {
+    display: none;
+  }
+
+  .account-row {
+    display: block;
+  }
+  
+  .account-cell {
+    display: block;
+    position: relative;
+    padding-left: 35%;
+    white-space: normal;
+    margin-bottom: 8px;
+  }
+
+  .account-cell:before {
+    content: attr(data-label) ": ";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: #4a8175;
+  }
+
+  .action-cell {
+    padding-top: 15px;
+    margin-top: 10px;
+  }
+
+  .action-cell:before {
+    display: none;
+}
+
+  .delete-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .account-row {
+    font-size: 12px;
+  }
+
+  .delete-btn {
+    height: 30px;
+  }
+}

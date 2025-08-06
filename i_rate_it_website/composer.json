@@ -1,0 +1,7 @@
+{
+    "require": {
+        "firebase/php-jwt": "^6.11",
+        "tecnickcom/tcpdf": "^6.10",
+        "ezyang/htmlpurifier": "^4.18"
+    }
+}

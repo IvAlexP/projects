@@ -1,0 +1,69 @@
+/* Comments display and management - specific styles */
+.comments {
+  margin: 1rem auto;
+  width: 90%;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.comments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.comments-header h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #206e57;
+  margin: 0;
+}
+
+.comments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual review item - specific styles */
+.review-item {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease;
+}
+
+/* Review user-rating layout */
+.review-user-rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.review-rating {
+  margin: 0;
+}
+
+/* Trait details in comments */
+.trait-details {
+  background-color: #f7f7f7;
+}
+
+.trait-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+  margin: 0.3rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.trait-detail-name {
+  font-weight: 500;
+  color: #206e57;
+}
+
+.trait-detail-rating {
+  font-size: 1.1rem;
+}

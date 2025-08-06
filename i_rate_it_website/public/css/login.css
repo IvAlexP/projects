@@ -1,0 +1,8 @@
+.grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+}
+
+body {
+    max-width: 400px;
+}

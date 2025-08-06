@@ -1,0 +1,192 @@
+/* Shared styles for both pending entities (admin) and my entities (owner) */
+
+/* Container */
+.shared-entities-container {
+  width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+/* Header */
+.shared-entities-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #bad1ca;
+}
+
+.shared-entities-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+/* List */
+.shared-entities-list {
+  width: 100%;
+}
+
+/* Entity Item */
+.shared-entity-item {
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e0e0e0;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.shared-entity-basic-info {
+  display: grid;
+  grid-template-columns: 150px 1fr 130px;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.shared-entity-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shared-entity-image {
+  width: 130px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.shared-entity-main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.shared-entity-name {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #2c3e50;
+  margin: 2px 0;
+}
+
+.shared-entity-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.shared-entity-detail {
+  display: flex;
+  gap: 5px;
+  align-items: baseline;
+}
+
+.shared-entity-detail-label {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #7f8c8d;
+  min-width: 60px;
+}
+
+.shared-entity-detail-value {
+  color: #2c3e50;
+  font-size: 0.9em;
+}
+
+.shared-entity-description {
+  padding: 10px;
+  border-radius: 4px;
+  font-style: italic;
+  color: #555;
+  overflow-y: auto;
+  margin: 0 !important;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.shared-entity-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.shared-entity-actions .button-full,
+.shared-entity-actions .button-border {
+  width: 120px;
+}
+
+.no-shared-entities,
+.shared-loading {
+  text-align: center;
+  padding: 40px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.no-shared-entities {
+  font-size: 1.1em;
+}
+
+@media (max-width: 780px) {
+  .shared-entities-container {
+    width: 80%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+  .shared-entity-basic-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .shared-entity-image-wrapper {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .shared-entity-image {
+    width: 100%;
+    max-width: 300px;
+  }
+  .shared-entity-main-info {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .shared-entity-details {
+    margin-top: 10px;
+    align-items: center;
+    text-align: center;
+  }
+  .shared-entity-detail {
+    justify-content: center;
+  }
+  .shared-entity-description {
+    text-align: center;
+  }
+  .shared-entity-actions {
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .shared-entity-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .shared-entity-actions .button-full,
+  .shared-entity-actions .button-border {
+    width: 100%;
+  }
+}

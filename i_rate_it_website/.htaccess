@@ -1,0 +1,27 @@
+RewriteEngine On
+RewriteBase /IRI_LilKartoffel/
+
+# 0. Acces exact pe /IRI_LilKartoffel/ → duce la home.html
+RewriteCond %{REQUEST_URI} ^/IRI_LilKartoffel/?$
+RewriteRule ^$ public/pages/home.html [L]
+
+# 1. /IRI_LilKartoffel/public/login|register|home → pages/*.html
+RewriteCond %{REQUEST_URI} ^/IRI_LilKartoffel/public/(login|register|home|profile)$
+RewriteRule ^public/(.*)$ public/pages/$1.html [L]
+
+# 2. /IRI_LilKartoffel/login|register|home → pages/*.html
+RewriteCond %{REQUEST_URI} ^/IRI_LilKartoffel/(login|register|home|profile)$
+RewriteRule ^(login|register|home|profile)$ public/pages/$1.html [L]
+
+# 3. /IRI_LilKartoffel/entities/:id → pages/*.html
+RewriteCond %{REQUEST_URI} ^/IRI_LilKartoffel/entities/([0-9]+)$
+RewriteRule ^entities/([0-9]+)$ public/pages/entities.html [L]
+
+# 4. /IRI_LilKartoffel/entity/:id → pages/*.html
+RewriteCond %{REQUEST_URI} ^/IRI_LilKartoffel/entity/([0-9]+)$
+RewriteRule ^entity/([0-9]+)$ public/pages/entity.html [L]
+
+# 5. Orice altceva (dacă nu e fișier/director) → index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php [L]

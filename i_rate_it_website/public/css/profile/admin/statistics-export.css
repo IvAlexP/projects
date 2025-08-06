@@ -1,0 +1,323 @@
+/* === Layout & Container === */
+.statistics-export-container {
+  width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: none;
+}
+
+.statistics-export-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+  color: black;
+}
+
+.statistics-export-header h3 {
+  margin: 0;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.statistics-export-content {
+  padding: 0;
+}
+
+.section-title {
+  color: #206e57;
+  margin: 0 0 20px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-bottom: 2px solid #bad1ca;
+  padding-bottom: 8px;
+}
+
+/* === Stats Section === */
+.stats-section {
+  padding: 15px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  justify-content: center;
+  max-width: 500px;
+}
+
+.stat-card {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1;
+}
+
+.stat-label {
+  margin: 5px 0 0 0;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    max-width: 100%;
+    gap: 6px;
+  }
+  .stat-card {
+    padding: 6px;
+    gap: 6px;
+  }
+  .stat-icon {
+    font-size: 1.3rem;
+  }
+  .stat-number {
+    font-size: 1.1rem;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+  }
+}
+
+/* === Rankings Section === */
+.rankings-section {
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+.ranking-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-content {
+  display: none;
+  min-height: 200px;
+  border-bottom: 1px solid #bad1ca;
+  border-top: 1px solid #bad1ca;
+  border-radius: 5px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.city-selector {
+  margin-bottom: 20px;
+}
+
+.city-selector select {
+  padding: 10px;
+  border: 1px solid #bad1ca;
+  border-radius: 5px;
+  font-size: 1rem;
+  min-width: 200px;
+  background-color: white;
+}
+
+.city-selector select:focus {
+  outline: none;
+  border-color: #206e57;
+  box-shadow: 0 0 5px rgba(32, 110, 87, 0.3);
+}
+
+.ranking-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #bad1ca;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.rank-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.rank-badge.rank-1 { background: #FFD700; color: #333; }
+.rank-badge.rank-2 { background: #C0C0C0; color: #333; }
+.rank-badge.rank-3 { background: #CD7F32; color: white; }
+.rank-badge.rank-other { background: #206e57; color: white; }
+
+.entity-info {
+  flex: 1;
+}
+
+.entity-info h4 {
+  margin: 0 0 5px 0;
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.entity-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.entity-stats {
+  display: flex;
+  gap: 15px;
+  color: #666;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+/* === Export Section === */
+.export-section {
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.export-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.export-card {
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.export-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #206e57;
+}
+
+.export-card h5 {
+  margin: 0 0 10px 0;
+  color: #206e57;
+  font-size: 1.2rem;
+}
+
+.export-card p {
+  margin: 0 0 20px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* === General/Utility === */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-style: italic;
+}
+
+.error {
+  text-align: center;
+  padding: 40px;
+  color: #dc3545;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px;
+  color: #206e57;
+  font-style: italic;
+  background-color: #DDEAE6;
+  border-radius: 5px;
+  border: 1px solid #bad1ca;
+}
+
+@media (max-width: 768px) {
+  .statistics-export-container {
+    width: 80%;
+  }
+  
+  .stat-card {
+    font-size: 12px;
+  }
+  
+  .ranking-tabs {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .tab-btn {
+    justify-content: center;
+  }
+  
+  .export-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .export-buttons {
+    flex-direction: column;
+  }
+  
+  .ranking-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .entity-details,
+  .entity-stats {
+    justify-content: center;
+  }
+}

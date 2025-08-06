@@ -1,0 +1,78 @@
+@media (max-width: 780px) {
+    .new-category-container {
+        padding: 15px;
+        margin-top: 15px;
+    }
+    
+    .new-category-container .profile-field,
+    .trait-field {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .new-category-container .field-label,
+    .trait-label {
+        width: auto !important;
+        padding-top: 0;
+        font-size: 15px;
+    }
+    
+    .new-category-container input[type="text"],
+    .trait-field input[type="text"] {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+
+    .entity-add-header h3 {
+        font-size: 18px;
+    }
+    
+    .entity-add-form .profile-field {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    
+    .entity-add-form .field-label {
+        width: auto;
+        padding-top: 0;
+        margin-bottom: 0;
+        font-size: 15px;
+    }
+    
+    .entity-add-form .picture-input-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    
+    .entity-add-form .picture-input-row .field-label {
+        width: auto;
+        padding-top: 0;
+        font-size: 15px;
+    }
+    
+    .entity-add-form input[type="text"],
+    .entity-add-form textarea,
+    .entity-add-form select {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .entity-add-form select {
+        padding-right: 35px;
+        background-size: 14px;
+    }
+    
+    .entity-add-form textarea {
+        min-height: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    .entity-add-form-container {
+        width: 80%;
+    }
+}

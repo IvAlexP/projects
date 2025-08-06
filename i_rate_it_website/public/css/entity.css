@@ -1,0 +1,11 @@
+/* Entity page modular CSS - Import all components */
+@import 'entity/entity-layout.css';
+@import 'entity/entity-traits.css';
+@import 'entity/forms-base.css';
+@import 'entity/write-comment.css';
+@import 'entity/write-reply.css';
+@import 'entity/comments-base.css';
+@import 'entity/comments.css';
+@import 'entity/buttons.css';
+@import 'entity/images.css';
+@import 'entity/controls.css';

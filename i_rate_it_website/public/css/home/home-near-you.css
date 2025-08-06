@@ -1,0 +1,215 @@
+/* Near You section styles */
+.near-you-title {
+  color: #000000;
+  font-size: 30px;
+  margin: 100px 0px 20px 0px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+/* Slider controls */
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.slider-arrow {
+  background-color: #DDEAE6;
+  border-radius: 10%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.slider-arrow:not(:disabled):hover {
+  background-color: #bad1ca;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.slider-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.slider-arrow:disabled:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Near you container and slider */
+.near-you-container {
+  position: relative;
+  width: calc(100% - 40px);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
+
+.near-you-slider {
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.near-you-entities {
+  display: flex;
+  gap: 25px;
+  transition: transform 0.3s ease;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+
+/* Near you items */
+.near-you-item {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 180px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: 1px solid #bad1ca;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.near-you-item:hover {
+  background-color: #DDEAE6;
+  transform: scale(1.05);
+}
+
+.near-you-item .entity-name {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #000000;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.near-you-item .entity-category {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+  padding: 4px 12px;
+  background-color: #DDEAE6;
+  border-radius: 15px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.near-you-item:hover .entity-category {
+  background-color: white;
+}
+
+.near-you-item .entity-city {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.near-you-item::after {
+  content: "\2192"; /* → */
+  position: absolute;
+  bottom: 12px;
+  right: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.near-you-item:hover::after {
+  transform: translateX(3px);
+}
+
+/* Responsive adjustments for near you section */
+@media (max-width: 1024px) {
+  .near-you-item {
+    width: 200px;
+    height: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .near-you-title {
+    font-size: 24px;
+    margin: 50px 0px 20px 0px;
+  }
+  
+  .near-you-entities {
+    gap: 15px;
+  }
+  
+  .near-you-item {
+    width: 180px;
+    height: 160px;
+    font-size: 0.9rem;
+  }
+  
+  .near-you-item .entity-name {
+    font-size: 1rem;
+  }
+
+  .slider-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+  
+  .slider-controls {
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .near-you-title {
+    font-size: 20px;
+    margin: 40px 0px 15px 0px;
+  }
+  
+  .near-you-entities {
+    gap: 10px;
+  }
+  
+  .near-you-item {
+    width: 160px;
+    height: 150px;
+    font-size: 0.85rem;
+    padding: 15px;
+  }
+  
+  .near-you-item .entity-name {
+    font-size: 0.95rem;
+  }
+
+  .slider-arrow {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+  
+  .slider-controls {
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+}

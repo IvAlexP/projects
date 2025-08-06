@@ -1,0 +1,104 @@
+/* Stiluri responsive pentru modalul de editare entitate */
+
+/* Tablet styles */
+@media (max-width: 780px) {
+    .entity-edit-modal {
+        padding: 10px;
+    }
+    
+    .entity-edit-content {
+        margin: 20px auto;
+        padding: 25px 20px;
+        max-width: 95%;
+        border-radius: 12px;
+    }
+    
+    .entity-edit-header h3 {
+        font-size: 20px;
+    }
+    
+    /* Stack form fields vertically on mobile */
+    .entity-edit-form .profile-field {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .entity-edit-form .field-label {
+        width: 100%;
+        min-width: 100%;
+        padding-top: 0;
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+    
+    /* Picture field responsive */
+    .entity-edit-form .profile-field.picture-field {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .entity-edit-form .picture-input-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .entity-edit-form .picture-input-row .field-label {
+        width: 100%;
+        min-width: 100%;
+        padding-top: 0;
+        margin-bottom: 5px;
+    }
+    
+    /* Full width inputs on mobile */
+    .entity-edit-form input[type="text"],
+    .entity-edit-form textarea,
+    .entity-edit-form input[type="file"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Stack action buttons vertically */
+    .profile-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .profile-actions button {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* Mobile phone styles */
+@media (max-width: 480px) {
+    .entity-edit-content {
+        padding: 20px 15px;
+        margin: 10px auto;
+    }
+    
+    .entity-edit-header {
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+    }
+    
+    .entity-edit-header h3 {
+        font-size: 18px;
+    }
+    
+    .entity-edit-form input[type="text"],
+    .entity-edit-form textarea {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .entity-edit-form textarea {
+        min-height: 100px;
+    }
+    
+    .current-picture img {
+        max-width: 200px;
+        max-height: 150px;
+    }
+}

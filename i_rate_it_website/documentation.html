@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" prefix="schema: https://schema.org/">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="schema:name" content="I RATE IT" />
+    <meta property="schema:author" content="Caleavalea Vasile-Andrei" />
+    <meta property="schema:author" content="Ivănușcă Alexandra-Paula" />
+    <meta property="schema:datePublished" content="2025-06-24" />
+    <meta property="schema:publisher" content="IRI LilKartoffel" />
+    <title>I RATE IT</title>
+    <link rel="schema" href="https://w3c.github.io/scholarly-html/" />
+    <style>
+      body {
+        font-family: Verdana, serif;
+        margin: 2rem;
+        line-height: 1.6;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #2c3e50;
+      }
+      article {
+        max-width: 800px;
+        margin: auto;
+      }
+      header,
+      section {
+        margin-bottom: 2rem;
+      }
+      .abstract {
+        background: #f9f9f9;
+        padding: 1rem;
+        border-left: 4px solid #ccc;
+      }
+      figure {
+        margin: 1.5rem 0;
+      }
+      figcaption {
+        font-size: 0.9rem;
+        color: #555;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+      }
+      pre,
+      code {
+        background: #eef;
+        padding: 0.5rem;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+      .directory-list {
+        list-style: none;
+        padding-left: 0;
+      }
+      .directory-list code {
+        background: #e3eafc;
+        color: #2c3e50;
+        font-weight: bold;
+      }
+      .directory-list details {
+        margin-bottom: 0.5em;
+      }
+      .directory-list summary {
+        cursor: pointer;
+        font-size: 1.05em;
+      }
+      .directory-list ul {
+        margin-left: 1.5em;
+        border-left: 2px solid #cce;
+        padding-left: 1em;
+      }
+    </style>
+  </head>
+  <body typeof="schema:ScholarlyArticle">
+    <article>
+      <header>
+        <h1 property="schema:name">I RATE IT</h1>
+        <p>
+          <span property="schema:author" typeof="schema:Person">
+            <span property="schema:name">Caleavalea Vasile-Andrei</span>
+          </span>
+          &amp;
+          <span property="schema:author" typeof="schema:Person">
+            <span property="schema:name">Ivănușcă Alexandra-Paula</span>
+          </span>
+        </p>
+        <p>
+          <time property="schema:datePublished" datetime="2025-06-24"
+            >June 24, 2025</time
+          >
+          &mdash;
+          <span property="schema:publisher" typeof="schema:Organization">
+            <span property="schema:name">IRI LilKartoffel</span>
+          </span>
+        </p>
+      </header>
+
+      <section class="abstract" property="schema:abstract">
+        <h2>Abstract</h2>
+        <p>
+          This document presents the architecture and features of the
+          <span property="schema:application">I RATE IT</span> web application,
+          a modular platform for managing user evaluations and opinions about
+          various entities—such as professions, institutions, companies,
+          products or services. Users can specify key characteristics,
+          (un)desirable traits and leave comments. The system generates
+          statistics and rankings, exportable as CSV or PDF, and provides an RSS
+          feed of entity rankings. This guide serves as a reference for
+          developers and administrators, covering structure, APIs and
+          extensibility.
+        </p>
+      </section>
+
+      <section property="schema:introduction">
+        <h2>1. Introduction</h2>
+        <p>
+          <span property="schema:about">I RATE IT</span> is built using PHP,
+          HTML, CSS and JavaScript . It enables management of entities
+          (locations, products, services), reviews, users and roles, with data
+          export, JWT authentication and a user-friendly responsive interface.
+          The goal is to centralize feedback and analytics about various
+          entities, allowing users to share their experiences and opinions
+          effectively.
+        </p>
+      </section>
+
+      <section property="schema:featureList">
+        <h2>2. Features</h2>
+        <ul>
+          <li property="schema:feature">
+            See entities based on categories or your location
+          </li>
+          <li property="schema:feature">Filter and sort entities</li>
+          <li property="schema:feature">Write your review from 1 to 5 stars</li>
+          <li property="schema:feature">Reply to others' reviews</li>
+          <li property="schema:feature">Report unadequated comments</li>
+          <li property="schema:feature">Like/Dislike reviews</li>
+          <li property="schema:feature">
+            <h3>Admin Features</h3>
+            <ul>
+              <li property="schema:feature">
+                Manage users, roles, comments and entities
+              </li>
+              <li property="schema:feature">
+                View statistics and rankings that can be exported
+              </li>
+            </ul>
+          </li>
+          <li property="schema:feature">
+            <h3>Owner Features</h3>
+            <ul>
+              <li property="schema:feature">Add, edit or remove entities</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section property="schema:softwareArchitecture">
+        <h2>3. Architecture</h2>
+        <h3>3.1 Directory Structure</h3>
+        <ul class="directory-list">
+          <li><code>.env</code></li>
+          <li><code>.htaccess</code></li>
+          <li><code>composer.json</code></li>
+          <li>
+            <details>
+              <summary><code>app/</code></summary>
+              <ul>
+                <li><code>controllers/</code></li>
+                <li><code>models/</code></li>
+                <li><code>core/</code></li>
+                <li><code>services/</code></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary><code>public/</code></summary>
+              <ul>
+                <li><code>assets/</code></li>
+                <li><code>css/</code></li>
+                <li><code>js/</code></li>
+                <li><code>pages/</code></li>
+                <li><code>index.php</code></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </section>
+
+      <section property="schema:dataModel">
+        <h2>4. Data Model</h2>
+        <figure>
+          <img
+            src="public/documentation/database.png"
+            alt="Database schema diagram"
+            style="max-width: 100%; border: 1px solid #ccc"
+          />
+          <figcaption>Database schema for I RATE IT.</figcaption>
+        </figure>
+      </section>
+
+      <section property="schema:userInterface">
+        <h2>5. User Interface Flows</h2>
+        <ol>
+          <li>Login, register and logout.</li>
+          <li>Home page: near you entities, see categories</li>
+          <li>Entities page: filter, sort, search, select entities</li>
+          <li>
+            Entity page: see ratings, add review or reply, like/dislike reviews
+            (or report them)
+          </li>
+          <li>Access profile from any page.</li>
+          <ul>
+            <p style="margin: 0">Edit profile</p>
+            <p style="margin: 0">Admin</p>
+
+            <ul>
+              <li>Pending roles</li>
+              <li>Pending entities</li>
+              <li>Accounts</li>
+              <li>Reports</li>
+              <li>Statistics and exports</li>
+            </ul>
+            <p style="margin: 0">Owner</p>
+            <ul>
+              <li>My entities</li>
+              <li>Add entity</li>
+            </ul>
+          </ul>
+        </ol>
+
+        <h3>Pages:</h3>
+        <figure>
+          <img 
+            src="public/documentation/home.png"
+            alt="Home page"
+            style="max-height: 300px; border: 1px solid #ccc"
+          />
+          <figcaption>Home page</figcaption>
+        </figure>
+        <figure>
+          <img 
+            src="public/documentation/profile.png"
+            alt="Admin profile page"
+            style="max-height: 300px; border: 1px solid #ccc"
+          />
+          <figcaption>Admin profile page</figcaption>
+        </figure>
+        <figure>
+          <img 
+            src="public/documentation/entities.png"
+            alt="Entities"
+            style="max-height: 300px; border: 1px solid #ccc"
+          />
+          <figcaption>Entities</figcaption>
+        </figure>
+        
+        <figure>
+          <img 
+            src="public/documentation/entity.png"
+            alt="Entity"
+            style="max-height: 300px; border: 1px solid #ccc"
+          />
+          <figcaption>Entity</figcaption>
+        </figure>
+
+      </section>
+
+
+      <section property="Diagram structure">
+        <h2>6. C4 diagram structure for the application</h2>
+        <figure>
+          <img 
+            src="public/documentation/C4-level1.png"
+            alt="C4 diagram level 1"
+            style="max-height: 400px; border: 1px solid #ccc"
+          />
+          <figcaption>C4 diagram level 1</figcaption>
+        </figure>
+
+        <figure>
+          <img 
+            src="public/documentation/C4-level2.png"
+            alt="C4 diagram level 2"
+            style="max-height: 400px; border: 1px solid #ccc"
+          />
+          <figcaption>C4 diagram level 2</figcaption>
+        </figure>
+
+        <figure>
+          <img 
+            src="public/documentation/C4-level3.png"
+            alt="C4 diagram level 3"
+            style="max-height: 400px; border: 1px solid #ccc"
+          />
+          <figcaption>C4 diagram level 3</figcaption>
+        </figure>
+      </section>
+
+      <section property="schema:security">
+        <h2>7. Security</h2>
+        <ul>
+          <li>JWT(JSON Web Token) in HTTP-only cookies</li>
+          <li>Role based access controll</li>
+          <li>Input sanitization via <code>InputSanitizer.php</code></li>
+          <li>XSS and SQL Injection protection</li>
+        </ul>
+      </section>
+
+      <section property="schema:requirements">
+        <h2>8. Requirements</h2>
+        <ul>
+          <li>PHP (or Laragon/XAMP) for hosting</li>
+          <li>Composer (for installing libraries)</li>
+          <li>With composer, install:</li>
+          <ul>
+            <li><code>composer require tecnickcom/tcpdf:^6.10</code> for PDF generator</li>
+            <li><code>composer require ezyang/htmlpurifier:^4.18</code> for sanitization</li>
+            <li><code>composer require firebase/php-jwt</code> for JWT token</li>
+          </ul>
+          <li>A HTML5 broswer </li>
+        </ul>
+      </section>
+
+      <section property="schema:extension">
+        <h2>9. Extensibility</h2>
+        <ul>
+          <li>Add notification system</li>
+          <li>Add subscribe system</li>
+          <li>Real location coordinates</li>
+          <li>Improve security(CORS)</li>
+        </ul>
+      </section>
+
+      <section  property="schema:proccess">
+        <h2>10. Process</h2>
+        <p>
+          The project was developed using GitHub for a better colaboration and to ensure stability at all stages. The first pages to be created were Register and Login, followed by the Home page. The entities were then added, allowing users to see them based on categories. The next step was to implement the review system, enabling users to leave comments and ratings for entities. The admin and owner features were developed last, allowing management of users, roles, comments and entities. The idea with the admin and owner features was to allow users to have a better experience, by being able to manage their own entities and comments, while also allowing admins to manage the entire platform. We added the Near you section as a bonus feature, allowing users to see entities based on their location.
+        </p>
+      </section>
+
+      <section property="schema:presentation">
+        <h2>Vide Presentation</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6lqNgko6WLo?si=AEYG7sg9QPqlK-3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </section>
+
+      <section property="schema:references">
+        <h2>11. References</h2>
+        <ol>
+          <li><a href="https://edu.info.uaic.ro/web-technologies/web-projects.html" target="_blank" rel="noopener">Course specifications</a></li>
+          <li><a href="https://profs.info.uaic.ro/oana.captarencu/tw/" target="_blank" rel="noopener">Laboratories</a></li>
+          <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">w3schools</a></li>
+        </ol>
+      </section>
+    </article>
+  </body>
+</html>

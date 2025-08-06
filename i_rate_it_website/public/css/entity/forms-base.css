@@ -1,0 +1,151 @@
+/* Base styles for forms (reviews and replies) */
+
+/* Common form container styles */
+.review-form-container,
+.reply-form-container {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.reply-form-container {
+  padding: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.review-form-container h3,
+.reply-form-container h4 {
+  color: #206e57;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+}
+
+.review-form-container h3 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.reply-form-container h4 {
+  font-size: 1rem;
+}
+
+/* Common textarea styles */
+.review-form-container textarea,
+.reply-textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.review-form-container textarea {
+  min-height: 120px;
+}
+
+.reply-textarea {
+  min-height: 80px;
+}
+
+.review-form-container textarea:focus,
+.reply-textarea:focus {
+  outline: none;
+  border-color: #206e57;
+  box-shadow: 0 0 0 3px rgba(32, 110, 87, 0.1);
+}
+
+.review-form-container textarea::placeholder,
+.reply-textarea::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+/* Common preview container styles */
+.preview-container,
+.reply-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.preview-container:empty,
+.reply-preview-container:empty {
+  display: none;
+  margin-top: 0;
+}
+
+.preview-item,
+.reply-preview-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preview-image,
+.reply-preview-image {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 6px;
+  border: 2px solid #ddd;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Common form actions */
+.review-form-actions,
+.reply-form-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.review-form-actions {
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.reply-form-actions {
+  justify-content: flex-end;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+/* Common upload area */
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* Common picture upload */
+.reply-picture-upload {
+  margin: 1rem 0;
+}
+
+/* Common labels */
+.review-form-container label,
+.review-form-container h4 {
+  font-weight: 600;
+  color: #206e57;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Character count */
+.character-count {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: right;
+  margin-top: 0.2rem;
+}

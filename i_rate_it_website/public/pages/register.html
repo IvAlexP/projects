@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ro">  
+  <head>    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="icon" type="image/x-icon" href="/IRI_LilKartoffel/public/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="/IRI_LilKartoffel/public/css/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="/IRI_LilKartoffel/public/css/register.css" />
+    <link rel="stylesheet" type="text/css" href="/IRI_LilKartoffel/public/css/form.css" />    
+    <script src="/IRI_LilKartoffel/public/js/register.js"></script>
+    <script src="/IRI_LilKartoffel/public/js/cookie-manager.js"></script>
+
+    <script src="/IRI_LilKartoffel/public/js/jwt-manager.js"></script>
+  </head>
+  <body>
+    <form
+      id="form-register"      class="form"
+      method="post"
+      action="/IRI_LilKartoffel/index.php?action=register"
+    ><div class="form-content">
+        <span class="close" onclick="history.back()">X</span>
+        <h2>Register to IRI</h2>
+        <div class="grid-container">
+          <div class="field">
+            <label for="first_name">First Name</label>
+            <input
+              type="text"
+              name="first_name"
+              id="first_name"
+              placeholder="First Name..."
+            />
+            <span id="first_name-error" class="incorrect-password"></span>
+          </div>
+          <div class="field">
+            <label for="last_name">Last Name</label>
+            <input              type="text"
+              name="last_name"
+              id="last_name"
+              placeholder="Last Name..."
+            />
+            <span id="last_name-error" class="incorrect-password"></span>
+          </div>          
+          <div class="field">
+            <label for="city">City</label>
+            <input
+              type="text"
+              name="city"
+              id="city"
+              placeholder="Your city..."
+            />
+            <span id="city-error" class="incorrect-password"></span>
+          </div>          <div class="field">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email..."
+            />
+            <span id="email-error" class="incorrect-password"></span>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password..."
+            />
+            <span id="password-error" class="incorrect-password"></span>
+          </div>
+          <div class="field">
+            <label for="confirm_password">Confirm Password</label>
+            <input
+              type="password"
+              name="confirm_password"
+              id="confirm_password"
+              placeholder="Password..."
+            />
+            <span id="confirm_password-error" class="incorrect-password"></span>
+          </div>
+        </div>
+        <div class="submit-button">
+          <button class="button-full" type="submit" onclick=""> Register </button>
+        </div>
+        <div class="info">
+          If you already have an account, log in
+          <a href="/IRI_LilKartoffel/login">here</a>.
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

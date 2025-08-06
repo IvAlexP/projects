@@ -1,0 +1,52 @@
+button {
+  padding: 0 1rem;
+  cursor: pointer;
+  min-width: 70px;
+  white-space: nowrap;
+  border: 1px solid #bad1ca;
+}
+
+button:hover {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  transform: scale(1.03);
+  border-radius: 5px;
+}
+
+.button-border {
+  background-color: white;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.button-full {
+  background-color: #bad1ca;
+  color: black;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.close-button, .close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 8px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+  min-width: auto;
+}
+
+/* Positioning for forms */
+.form-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-button:hover, .close:hover {
+  background-color: #bad1ca;
+  transform: none !important;
+  box-shadow: none !important;
+}

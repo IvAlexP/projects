@@ -1,0 +1,41 @@
+/* Entity traits display - only for entity page top section */
+.entity_traits {
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.traits_title {
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  color: #206e57;
+}
+
+.trait_item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.trait_name {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.trait_stars {
+  display: flex;
+  gap: 2px;
+  margin: 0 1rem;
+}
+
+.star.filled {
+  color: yellow !important;
+}
+
+.star.empty {
+  color: #cecece !important;
+}

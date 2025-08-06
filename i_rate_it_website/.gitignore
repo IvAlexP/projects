@@ -1,0 +1,35 @@
+# Environment variables
+.env
+
+# Custom files
+/.mine
+
+# IDE files
+.idea
+.vscode/
+*.swp
+*.swo
+
+# Vendor dependencies
+/vendor
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+/logs/
+
+# Cache
+/cache/
+/tmp/
+
+# User uploads (except sample files)
+/public/uploads/
+!/public/uploads/.gitkeep

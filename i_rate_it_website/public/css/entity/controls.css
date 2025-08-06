@@ -1,0 +1,157 @@
+/* Review controls and filters */
+.review-controls {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.rating-filter-control,
+.image-filter-control,
+.sort-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 0 0 auto;
+  min-width: 140px;
+  max-width: 180px;
+}
+
+.search-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 160px;
+}
+
+.review-controls label {
+  font-weight: 600;
+  color: #206e57;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.review-controls select,
+.review-controls input[type="text"] {
+  padding: 0.6rem 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background-color: white;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.review-controls select:focus,
+.review-controls input[type="text"]:focus {
+  outline: none;
+  border-color: #BAD1CA;
+  box-shadow: 0 0 0 3px rgba(32, 110, 87, 0.1);
+}
+
+.review-controls input[type="text"]::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.review-controls select {
+  cursor: pointer;
+}
+
+.review-controls select option {
+  padding: 0.5rem;
+  background-color: white;
+  color: #333;
+}
+
+/* Controls responsive styles */
+@media (min-width: 781px) {
+  .review-controls {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .rating-filter-control,
+  .image-filter-control,
+  .sort-control,
+  .search-control {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 780px) and (min-width: 601px) {
+  .review-controls {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .rating-filter-control,
+  .image-filter-control,
+  .sort-control {
+    flex: 1;
+    min-width: 140px;
+    max-width: 200px;
+  }
+
+  .search-control {
+    flex: 1 1 100%;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .review-controls select,
+  .review-controls input[type="text"] {
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .review-controls {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .rating-filter-control,
+  .image-filter-control,
+  .sort-control,
+  .search-control {
+    min-width: 100%;
+    width: 100%;
+    max-width: none;
+  }
+
+  .review-controls select,
+  .review-controls input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 500px) {
+  .review-controls {
+    margin: 1rem 0;
+    padding: 0.8rem;
+  }
+
+  .review-controls label {
+    font-size: 0.85rem;
+  }
+
+  .review-controls select,
+  .review-controls input[type="text"] {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .review-controls select {
+    background-size: 0.9rem;
+    padding-right: 2.2rem;
+  }
+}

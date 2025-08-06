@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">  <head>    
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="/IRI_LilKartoffel/public/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/IRI_LilKartoffel/public/css/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="/IRI_LilKartoffel/public/css/login.css" />
+    <link rel="stylesheet" type="text/css" href="/IRI_LilKartoffel/public/css/form.css" />    
+    <script src="/IRI_LilKartoffel/public/js/login.js"></script>
+    <script src="/IRI_LilKartoffel/public/js/cookie-manager.js"></script>
+
+    <script src="/IRI_LilKartoffel/public/js/jwt-manager.js"></script>
+
+  </head>
+  <body>
+    <form id="form-login" class="form">
+      <div class="form-content">
+        <span class="close" onclick="history.back()">X</span>
+        <h2>Log in to IRI</h2>
+        <div class="grid-container">
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email..."
+              required
+            />
+            <span id="email-error" class="incorrect-password"></span>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password..."
+              required
+            />
+            <span id="password-error" class="incorrect-password"></span>          </div>
+        </div>
+        <div class="submit-button">
+          <button type="submit" class="button-full">Log in</button>
+        </div>
+        <div class="info">
+          If you do not have an account, register
+          <a href="/IRI_LilKartoffel/register">here</a>.
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

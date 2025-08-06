@@ -1,0 +1,65 @@
+/* Categories section styles */
+.categories_title {
+  color: #000000;
+  font-size: 30px;
+  margin: 100px 0px 20px 0px;
+  text-align: center;
+  width: 100%;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.category_item {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: 1px solid #bad1ca;
+}
+
+.category_item:hover {
+  background-color: #DDEAE6;
+  transform: scale(1.05);
+}
+
+.category_item::after {
+  content: "\2192"; /* → */
+  position: absolute;
+  bottom: 12px;
+  right: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.category_item:hover::after {
+  transform: translateX(3px);
+}
+
+/* Responsive adjustments for categories */
+@media (max-width: 500px) {
+  .categories {
+    gap: 10px;
+  }
+
+  .category_item {
+    width: 150px;
+    height: 150px;
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,4 @@
+/* Home page styles - modular structure */
+@import url('./home/home-base.css');
+@import url('./home/home-categories.css');
+@import url('./home/home-near-you.css');

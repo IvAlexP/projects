@@ -1,0 +1,80 @@
+.entity-add-form-container {
+    display: none;
+    width: 70%;
+    max-width: 900px;
+}
+
+.entity-add-content {
+    padding: 0;
+}
+
+.entity-add-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #bad1ca;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.entity-add-header h3 {
+    margin: 0;
+}
+
+.entity-add-form {
+    margin-top: 25px;
+}
+
+.entity-add-form .profile-field:first-child {
+    margin-top: 0;
+}
+
+.entity-add-form .profile-field {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.entity-add-form .field-label {
+    font-weight: bold;
+    width: 90px;
+    color: #333;
+    padding-top: 12px;
+    font-size: 16px;
+    flex-shrink: 1;
+}
+
+.add-profile-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.entity-add-form .current-picture {
+    text-align: center;
+    margin-top: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.current-picture {
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.current-picture img {
+    max-width: min(250px, 90%);
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #eee;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}

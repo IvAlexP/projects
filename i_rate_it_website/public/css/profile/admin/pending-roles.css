@@ -1,0 +1,223 @@
+.admin-section {
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.pending-roles-container {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: none;
+}
+
+.pending-roles-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #bad1ca;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.pending-roles-header h3 {
+    margin: 0;
+    color: #333;
+}
+
+.pending-roles-list {
+    width: 100%;
+}
+
+.pending-role-item {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    flex: 2;
+    text-align: left;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.role-info {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+}
+
+.current-role {
+    color: #555;
+}
+
+.desired-role {
+    color: #4a8175;
+    font-weight: bold;
+}
+
+.pending-roles-actions {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.pending-roles-actions button {
+    box-sizing: border-box;
+    width: 100%; 
+}
+
+.no-pending-roles,
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    font-style: italic;
+}
+
+.loading {
+    padding: 25px 10px;
+    font-size: 16px;
+}
+
+@media (max-width: 900px) {
+    .admin-section {
+        width: 70%;
+    }
+    
+    .pending-roles-container {
+        width: 85%;
+        padding: 15px;
+    }
+
+    .pending-role-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .user-info {
+        grid-column: 1;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .role-info {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+    
+    .pending-roles-actions {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 10px;
+        margin-top: 5px;
+    }
+    
+    .pending-roles-actions button {
+        flex: 1;
+        margin: 0;
+    }
+    
+    .user-name {
+        font-weight: bold;
+        margin-bottom: 3px;
+    }
+    
+    .user-email {
+        font-size: 0.9em;
+        color: #666;
+    }
+    
+    .current-role {
+        color: #555;
+        margin-bottom: 3px;
+    }
+    
+    .desired-role {
+        color: #4a8175;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 500px) {
+    .admin-section {
+        width: 80%;
+    }
+    
+    .pending-roles-container {
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    
+    .pending-role-item {
+        display: block;
+    }
+    
+    .user-info, 
+    .role-info {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    .user-info {
+        margin-bottom: 20px;
+    }
+    
+    .user-name {
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+
+    .role-info {
+        margin-bottom: 20px;
+    }
+    
+    .pending-roles-actions {
+        display: block;
+        width: 100%;
+        padding: 5px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .pending-roles-actions button {
+        width: 100%;
+        margin: 5px 0;
+        padding: 0 10px;
+    }
+    
+    .no-pending-roles, 
+    .loading {
+        padding: 25px 10px;
+        font-size: 16px;
+    }
+}

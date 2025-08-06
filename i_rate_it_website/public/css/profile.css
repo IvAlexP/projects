@@ -1,0 +1,17 @@
+/* Profile page modular CSS - Import all components */
+@import 'profile/profile-base.css';
+@import 'profile/shared-entities.css';
+
+/* Admin modules */
+@import 'profile/admin/pending-roles.css';
+@import 'profile/admin/manage-accounts.css';
+@import 'profile/admin/statistics-export.css';
+
+/* Owner modules */
+@import 'profile/owner/add-entity/layout.css';
+@import 'profile/owner/add-entity/forms.css';
+@import 'profile/owner/add-entity/responsive.css';
+
+@import 'profile/owner/edit-entity/layout.css';
+@import 'profile/owner/edit-entity/forms.css';
+@import 'profile/owner/edit-entity/responsive.css';

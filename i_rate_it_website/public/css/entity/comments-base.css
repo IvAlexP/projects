@@ -1,0 +1,112 @@
+/* Base styles for comments and replies */
+
+/* Common header styles */
+.comment-header-base,
+.reply-header,
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 10px;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Common header left section */
+.comment-header-left-base,
+.reply-header-left,
+.review-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: flex-start;
+}
+
+/* Common user name styles */
+.comment-user-base,
+.reply-user,
+.review-user {
+  font-weight: 600;
+  color: #206e57;
+  font-size: 1rem;
+}
+
+/* Common date styles */
+.comment-date-base,
+.reply-date,
+.review-date {
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Common text content styles */
+.comment-text-base,
+.reply-text,
+.review-text {
+  color: #333;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.reply-item {
+  margin: 0 !important;
+  padding: 1rem;
+}
+
+/* Common voting buttons */
+.comment-vote-buttons-base,
+.reply-item .vote-buttons {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  margin-left: auto;
+}
+
+.comment-vote-btn-base,
+.reply-item .vote-btn.like-btn,
+.reply-item .vote-btn.dislike-btn {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 12px;
+  margin: 0;
+  min-width: 45px;
+}
+
+.comment-vote-btn-base:hover,
+.reply-item .vote-btn.like-btn:hover,
+.reply-item .vote-btn.dislike-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Common responsive styles */
+@media (max-width: 500px) {
+  .comment-header-left-base,
+  .reply-header-left,
+  .review-header-left {
+    gap: 0.1rem;
+  }
+
+  .comment-vote-buttons-base,
+  .reply-item .vote-buttons {
+    gap: 0.2rem;
+  }
+
+  .comment-vote-btn-base,
+  .reply-item .vote-btn.like-btn,
+  .reply-item .vote-btn.dislike-btn {
+    padding: 0.15rem 0.4rem;
+    font-size: 0.7rem;
+    min-width: 40px;
+  }
+}
+
+
+.review-report-icon {
+  color: #e53935;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 8px;
+}
