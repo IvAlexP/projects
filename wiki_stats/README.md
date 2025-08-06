@@ -1,6 +1,7 @@
 # Project title
 Wiki_stats
 
+
 ## Description
 The purpose of this project is to read the zip archieve provided and extract certain information about all the data from all JSON files and print the it in a file: 
 * a frequency list of all the words as written
@@ -8,8 +9,10 @@ The purpose of this project is to read the zip archieve provided and extract cer
 * the title, the path in the zip and the size of the longest article
 * the title, the path in the zip and the size of the longest title
 
+
 ## Programming languages
 Rust
+
 
 ## Getting started
 ### Installing
@@ -43,7 +46,6 @@ cd project
 3. Copy the code from the [main.rs](main.rs) file into the new one created.
 
 
-
 ### Dependencies
 
 In the **Cargo.toml** file, you have to add the necessary dependencies:
@@ -57,7 +59,6 @@ threadpool = "1.8"
 zip = "0.6"
 num_cpus = "1.13"
 ```
-
 
 ### Executing program
 1. Open **Windows PowerShell**
