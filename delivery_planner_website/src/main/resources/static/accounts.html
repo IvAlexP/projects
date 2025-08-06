@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Admin - Accounts</title>
+    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/accounts.css" rel="stylesheet"/>
+    <script src="./js/api.js"></script>
+    <script src="js/accounts.js"></script>
+
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="admin-only" href="couriers.html" style="display: none">Couriers</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a class="admin-only" href="./accounts.html" style="display: none">Accounts</a></li>
+        <li><a href="#" onclick="logoutUser()">Logout</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h1>Manage accounts</h1>
+    <div id="errorMsg" style="color:red;"></div>
+
+    <table id="usersTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Roles</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Add role</h2>
+    <form id="addRoleForm" onsubmit="handleAddRole(event)">
+        <label for="userIdToAddRole">User ID:</label>
+        <input id="userIdToAddRole" required type="number">
+
+        <label for="roleToAdd">Role (admin / client / courier):</label>
+        <select id="roleToAdd" required>
+            <option value="client">Client</option>
+            <option value="courier">Courier</option>
+            <option value="admin">Admin</option>
+        </select>
+
+        <button type="submit">Add role</button>
+    </form>
+
+    <h2>Delete role</h2>
+    <form id="removeRoleForm" onsubmit="handleRemoveRole(event)">
+        <label for="userIdToRemoveRole">User ID:</label>
+        <input id="userIdToRemoveRole" required type="number">
+
+        <label for="roleToRemove">Role (admin / client / courier):</label>
+        <select id="roleToRemove" required>
+            <option value="client">Client</option>
+            <option value="courier">Courier</option>
+            <option value="admin">Admin</option>
+        </select>
+
+        <button type="submit">Delete role :(</button>
+    </form>
+</div>
+
+</body>
+</html>
