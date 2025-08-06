@@ -46,7 +46,7 @@ cd project
 
 ### Dependencies
 
-In the **Cargo.toml** file, you have to add the neccessary dependencies:
+In the **Cargo.toml** file, you have to add the necessary dependencies:
 
 ```toml
 [dependencies]
