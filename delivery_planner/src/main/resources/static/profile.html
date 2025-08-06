@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Profile</title>
+    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/profile.css" rel="stylesheet"/>
+    <script src="./js/api.js"></script>
+    <script src="./js/profile.js"></script>
+</head>
+
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="admin-only" href="couriers.html" style="display: none">Couriers</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="./profile.html">Profile</a></li>
+        <li><a class="admin-only" href="accounts.html" style="display: none">Accounts</a></li>
+        <li><a href="#" onclick="logoutUser()">Logout</a></li>
+    </ul>
+</nav>
+
+<div class="content-wrapper">
+    <h1>User Profile</h1>
+
+    <div class="info-container">
+        <p><strong>ID:</strong> <span id="userId">—</span></p>
+        <p><strong>Username:</strong> <span id="username">—</span></p>
+        <p><strong>Roles:</strong> <span class="roles-list" id="roles">—</span></p>
+    </div>
+
+    <div class="address-container">
+        <h2>Personal address</h2>
+        <form id="addressForm">
+            <label>
+                Latitude:
+                <input
+                        id="latitude"
+                        placeholder="Ex: 44.4268"
+                        required
+                        step="any"
+                        type="number"
+                />
+            </label>
+
+            <label>
+                Longitude:
+                <input
+                        id="longitude"
+                        placeholder="Ex: 26.1025"
+                        required
+                        step="any"
+                        type="number"
+                />
+            </label>
+
+            <button type="submit">Save address</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
