@@ -1,0 +1,5 @@
+export const GAME_RULES = {
+  BASE_POINTS: 10,
+  COMBO_BONUS: 25,
+  COMBO_THRESHOLD: 3,
+};

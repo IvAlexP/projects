@@ -1,0 +1,72 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);   
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;  
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.modalContent h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--t2-gray);
+  padding-bottom: 0.5rem;
+}
+
+.configSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.configSection label {
+  font-weight: bold;
+}
+
+.configSection input,
+.configSection textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--t1-gray);
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.configSection textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.row .configSection {
+  flex: 1;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}

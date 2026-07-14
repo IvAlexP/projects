@@ -1,0 +1,37 @@
+.section2Container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 4rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 2rem;
+}
+
+.column {
+    flex: 1 0 200px;
+    margin: 1rem 0;
+}
+
+.column:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.column.textColumn {
+    background-image: linear-gradient(to right, white,  var(--t2-gray), white);
+    border-radius: 25px;
+    padding: 5%;
+    margin: 0 auto;
+}
+
+.columnTitle {
+    margin-bottom: 1.5rem;
+}
+
+.columnSubtitle {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}

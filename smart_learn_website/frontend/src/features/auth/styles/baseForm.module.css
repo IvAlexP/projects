@@ -1,0 +1,30 @@
+.logoWrapper {
+  top: 0;
+}
+
+.form {
+  color: white;
+  position: relative;
+  padding: 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.2);
+  background-color: var(--t2-gray);
+}
+
+.formTitle {
+  margin-bottom: 2rem;
+}
+
+.formButton {
+  margin: 2rem 0;
+  padding: 1rem 3rem;
+}
+
+.link {
+  color: white;
+}

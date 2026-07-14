@@ -1,0 +1,54 @@
+.section3Container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 4rem 0;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section3ImageContainer {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    flex: 1 1 250px;
+}
+
+.section3Image {
+  width: 70%;
+}
+
+.section3Text {
+    flex: 7;
+    flex-basis: 250px;
+}
+
+.section3Title {
+    margin: 2rem 0;
+}
+
+.section3Subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 40px;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+}
+
+.section3Subtitle .badgeContainer {
+    flex: 3;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+
+.section3Subtitle .badge {
+    max-width: 30%;
+    min-width: 50px;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0 auto;
+}
+

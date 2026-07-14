@@ -1,0 +1,139 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id          Int      @id @default(autoincrement())
+  email       String   @unique
+  password    String
+  displayName String
+  createdAt   DateTime @default(now())
+
+  isEmailVerified        Boolean @default(false)
+  emailVerificationToken String?
+
+  role                  Role      @default(USER)
+  lastActivityAt        DateTime  @default(now())
+  deletionWarningSentAt DateTime?
+
+  refreshToken String?
+  sets         Set[]
+  cardData     UserCardMetadata[]
+
+  currentStreak      Int         @default(0)
+  longestStreak      Int         @default(0)
+  streakSecuredToday Boolean     @default(false)
+  badges             UserBadge[]
+
+  points            Int             @default(0)
+  currentEasyStreak Int             @default(0)
+  dailyActivities   DailyActivity[]
+}
+
+model Set {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  createdAt   DateTime @default(now())
+  userId      Int
+  sourceFiles String[]
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  cards       Card[]
+}
+
+model Card {
+  id        Int                @id @default(autoincrement())
+  setId     Int
+  set       Set                @relation(fields: [setId], references: [id], onDelete: Cascade)
+  question  String
+  answer    String
+  createdAt DateTime           @default(now())
+  userData  UserCardMetadata[]
+}
+
+model UserCardMetadata {
+  id     Int @id @default(autoincrement())
+  userId Int
+  cardId Int
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  card Card @relation(fields: [cardId], references: [id], onDelete: Cascade)
+
+  due            DateTime @default(now()) // when the card is due for review
+  stability      Float    @default(0) // number of days until the recall probability drops to 90%
+  difficulty     Float    @default(0) // 1-10, 1 is easy, 10 is hard
+  elapsed_days   Int      @default(0) // number of days since the last review
+  scheduled_days Int      @default(0) // number of days until the next review
+  reps           Int      @default(0) // number of times the card has been reviewed
+  lapses         Int      @default(0) // number of times the card has been forgotten
+  learning_steps Int      @default(0) // number of days in the short-term memory phase
+  state          Int      @default(0) // 0 = new, 1 = learning, 2 = review, 3 = relearning
+
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  reviewLogs ReviewLog[]
+
+  @@unique([userId, cardId]) // 1 record per card per user (in case of sharing cards between users in the future)
+}
+
+model ReviewLog {
+  id                 Int              @id @default(autoincrement())
+  userCardMetadataId Int
+  userCardMetadata   UserCardMetadata @relation(fields: [userCardMetadataId], references: [id], onDelete: Cascade)
+
+  rating Int
+  state  Int
+
+  createdAt DateTime @default(now())
+
+  stability      Float
+  difficulty     Float
+  scheduled_days Int
+}
+
+model Badge {
+  id             Int     @id @default(autoincrement())
+  code           String  @unique
+  name           String
+  description    String
+  icon           String?
+  requiredStreak Int?
+  pointsReward   Int     @default(0)
+
+  users UserBadge[]
+}
+
+model UserBadge {
+  id       Int      @id @default(autoincrement())
+  earnedAt DateTime @default(now())
+
+  userId Int
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  badgeId Int
+  badge   Badge @relation(fields: [badgeId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, badgeId]) // a user cannot earn the exact same badge twice
+}
+
+model DailyActivity {
+  id Int @id @default(autoincrement())
+
+  userId Int
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  date          DateTime @db.Date // Stores just the calendar date (YYYY-MM-DD)
+  pointsEarned  Int      @default(0)
+  cardsReviewed Int      @default(0)
+
+  @@unique([userId, date]) // Ensures only ONE record per user, per day
+}

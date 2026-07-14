@@ -1,0 +1,61 @@
+services:
+  # Database
+  db:
+    image: postgres:16 # use an official PostgreSQL image
+    environment: # set environment variables for database configuration
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports: # expose port to access the database from outside the container
+      - "${DB_PORT_EXTERNAL}:${DB_PORT_INTERNAL}"
+    volumes: # persist database data on the host to avoid losing it when the container stops
+      - postgres_data:/var/lib/postgresql/data
+
+  # Backend (NestJS)
+  backend:
+    build: ./backend # build the backend image using the Dockerfile from the backend directory
+    env_file:
+      - .env  # Docker reads the entire file and passes it to NestJS (for app.module.ts and main.ts)
+    ports: # expose port to access the API from outside the container
+      - "${BACKEND_PORT}:${BACKEND_PORT}"
+    depends_on: # ensure the backend starts after the database is ready
+      - db
+    environment: # set environment variable for database connection
+      - NODE_ENV=development # change to production later
+      - DATABASE_URL=${DATABASE_URL}
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    volumes:
+      - ./backend:/app          # mirror the backend source code in the container for development
+      - /app/node_modules       # ensure node_modules is not shared between host and container to avoid compatibility issues
+    command: sh -c "npx prisma migrate deploy && npx prisma db seed && npm run start:dev"
+
+  # Frontend (React)
+  frontend:
+    build: ./frontend # build the frontend image using the Dockerfile from the frontend directory
+    env_file:
+      - .env  # Docker reads the entire file and passes it to Vite (for vite.config.ts)
+    ports:
+      - "${FRONTEND_PORT}:${FRONTEND_PORT}"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app   # mirror the frontend source code in the container for development
+      - /app/node_modules # ensure node_modules is not shared between host and container to avoid compatibility issues
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+    ports:
+      - "${PGADMIN_PORT_EXTERNAL}:80"
+    depends_on:
+      - db
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+volumes:
+  postgres_data:
+  pgadmin_data:

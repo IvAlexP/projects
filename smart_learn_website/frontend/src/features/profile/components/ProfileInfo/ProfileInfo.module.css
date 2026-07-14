@@ -1,0 +1,33 @@
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infoItem {
+  border-bottom: 2px solid var(--t-white);
+  padding-bottom: 8px;
+  position: relative;
+  flex-direction: column;
+}
+
+.infoAction {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.button {
+  width: fit-content;
+}
+
+.points {
+  font-weight: bold;
+  color: var(--secondary-color);
+}

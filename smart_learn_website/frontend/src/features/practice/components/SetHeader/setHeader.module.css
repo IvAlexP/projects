@@ -1,0 +1,16 @@
+.header {
+    margin-bottom: 2rem;
+}
+
+.header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.header p {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--t-white);
+    padding-bottom: 0.5rem;
+}

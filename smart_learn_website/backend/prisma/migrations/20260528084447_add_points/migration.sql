@@ -1,0 +1,6 @@
+-- AlterTable
+ALTER TABLE "Badge" ADD COLUMN     "pointsReward" INTEGER NOT NULL DEFAULT 0;
+
+-- AlterTable
+ALTER TABLE "User" ADD COLUMN     "currentEasyStreak" INTEGER NOT NULL DEFAULT 0,
+ADD COLUMN     "points" INTEGER NOT NULL DEFAULT 0;

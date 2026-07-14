@@ -1,0 +1,38 @@
+.container {
+  margin-bottom: 3rem;
+}
+
+.header {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.setsContainer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.set {
+  
+}
+
+.dueCardsCount {
+  color: var(--secondary-color);
+}
+
+.practiceBtn {
+  position: absolute;
+  text-decoration: none;
+  bottom: 1rem;
+  right: 1.2rem;
+  color: var(--primary-color);
+}
+
+.set:hover .practiceBtn {
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}

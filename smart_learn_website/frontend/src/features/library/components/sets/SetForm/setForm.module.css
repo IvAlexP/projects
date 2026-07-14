@@ -1,0 +1,23 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.cardItem {
+  margin-top: 1rem;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  gap: 10px;
+}
+
+.addCardBtn {
+  background-color: var(--primary-color);
+  margin: 1rem 0;
+}

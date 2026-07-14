@@ -1,0 +1,46 @@
+.detailView {
+  border-bottom: 2px solid var(--t-white);
+  padding-bottom: 0.5rem;
+}
+
+.detailView h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.detailView h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.infoSection {
+  margin: 1.5rem 0;
+}
+
+.cardsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.seeAnswersBtn {
+  margin-bottom: 1rem;
+}
+
+.backButton {
+  margin-bottom: 2rem;
+}
+
+.infoActions {
+  text-align: right;
+}

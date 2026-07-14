@@ -1,0 +1,17 @@
+.baseCard {
+    position: relative;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 6px 6px var(--t2-gray);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.baseCard:hover {
+    box-shadow: 0 6px 8px var(--t1-gray);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}

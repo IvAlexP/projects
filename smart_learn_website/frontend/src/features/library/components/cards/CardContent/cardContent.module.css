@@ -1,0 +1,36 @@
+.cardItem {
+  margin: 0;
+  gap: 0;
+}
+
+.cardItem p {
+  margin: 0;  
+  line-height: 1.5;
+}
+
+.cardItem b {
+  color: var(--secondary-color);
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.answer {
+  transition: filter 0.3s ease;
+}
+
+/* must have data prefix !!! */
+
+.answer[data-reveal="true"] {
+  filter: none;
+}
+
+.answer[data-reveal="false"] {
+  filter: blur(3px);
+}
+
+.cardActions {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: flex-end;
+}

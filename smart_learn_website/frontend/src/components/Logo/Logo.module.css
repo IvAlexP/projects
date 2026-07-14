@@ -1,0 +1,10 @@
+.logo {
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none; 
+    font-size: inherit;
+}

@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pageContent {
+  width: 80%;
+  margin: 4rem auto;
+}
+
+.pageContent h2 {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .pageContent {
+    width: 90%;
+    margin: 2rem auto;
+  }
+}

@@ -1,0 +1,34 @@
+.heroContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 10%;
+  background-color: var(--primary-color);
+}
+
+.heroText {
+  flex: 6;
+  flex-basis: 250px;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.heroImageContainer {
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: right;
+}
+
+.heroImage {
+  width: 100%;
+  max-width: 300px;
+}

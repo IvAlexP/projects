@@ -1,0 +1,23 @@
+.formBckgContainer {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.formBckg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  background-image: url(../assets/bckg.jpg);
+}
+
+.formWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}

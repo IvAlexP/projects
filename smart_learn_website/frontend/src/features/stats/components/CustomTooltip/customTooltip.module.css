@@ -1,0 +1,24 @@
+.card {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+}
+
+.card p {
+  font-size: 12px;
+}
+
+.cards {
+  color: green;
+}
+
+.points {
+  color: var(--secondary-color);
+}
+
+.total {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--t1-gray);
+}

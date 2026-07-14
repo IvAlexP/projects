@@ -1,0 +1,23 @@
+.statsContainer {
+  position: relative;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 6px 6px var(--t2-gray);
+  padding: 20px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.statsContainer h3 {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--t2-gray);
+}
+
+.btnGroup {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+

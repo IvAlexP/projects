@@ -1,0 +1,46 @@
+.detailView {
+  margin-bottom: 3rem;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.cardsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.setsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.count {
+  color: var(--secondary-color);
+}
+
+.arrow {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.2rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  transition: all 0.2s ease;
+}
+
+.set {
+}
+
+.set:hover .arrow {
+  color: var(--secondary-color);
+}

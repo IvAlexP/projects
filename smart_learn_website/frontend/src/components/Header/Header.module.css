@@ -1,0 +1,25 @@
+.headerContainer {
+  padding: 1.2rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  flex-wrap: wrap;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 1rem;
+}
+
+.points {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.admin {
+  font-weight: bold;
+  color: var(--red);
+}

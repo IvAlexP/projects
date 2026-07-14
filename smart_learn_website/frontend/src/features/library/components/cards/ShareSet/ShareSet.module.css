@@ -1,0 +1,80 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* stays on top of other content */
+}
+
+.modalContent {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.modalContent h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--t2-gray);
+  padding-bottom: 0.5rem;
+}
+
+.configSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.configSection input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--t1-gray);
+  border-radius: 4px;
+}
+
+.scrollableList {
+  max-height: 100px;
+  overflow-y: auto; /* forces vertical scrollbar if max-height is exceeded */
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid var(--t1-gray);
+  border-radius: 6px;
+  background-color: var(--t2-gray);
+}
+
+.scrollableList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollableList::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.scrollableList label {
+  display: block;
+  cursor: pointer;
+  padding: 8px 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.scrollableList input[type="radio"] {
+  margin-right: 8px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}

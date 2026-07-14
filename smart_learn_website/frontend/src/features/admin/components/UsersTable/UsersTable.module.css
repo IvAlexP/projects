@@ -1,0 +1,93 @@
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  border: 2px solid var(--t2-gray);
+}
+
+.table th,
+.table td {
+  padding: 1rem 0.5rem;
+  border-bottom: 2px solid var(--t2-gray);
+}
+
+.table th {
+  background-color: var(--t2-gray);
+  font-weight: bold;
+}
+
+.email {
+  word-break: break-word;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.badgeAdmin,
+.badgeUser {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.badgeAdmin {
+  color: var(--red);
+}
+
+.badgeUser {
+  color: var(--third-color);
+}
+
+.emptyRow {
+  text-align: center;
+  padding: 2rem !important;
+}
+
+@media (max-width: 800px) {
+  .table {
+    border: none;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--t2-gray);
+    border-radius: 12px;
+    padding: 0.5rem;
+  }
+
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    border-bottom: 1px solid var(--t2-gray);
+    padding: 0.75rem 0.5rem;
+  }
+
+  .table td:last-child {
+    border-bottom: none;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-align: left;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+}

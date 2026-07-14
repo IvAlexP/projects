@@ -1,0 +1,74 @@
+.base {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.primary {
+  background-color: var(--secondary-color);
+  color: #000000;
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.primary:disabled {
+  background-color: var(--primary-color);
+  cursor: default;
+}
+
+.primary:not(:disabled):hover {
+  color: white;
+  background-color: var(--third-color);
+}
+
+.danger {
+  background-color: var(--red);
+  color: black;
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.danger:disabled {
+  background-color: var(--red);
+  opacity: 0.6;
+  cursor: default;
+}
+
+.danger:not(:disabled):hover {
+  color: white;
+  background-color: darkred;
+}
+
+.light {
+  background: none;
+  color: var(--secondary-color);
+  font-size: inherit;
+}
+
+.light:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.light:not(:disabled):hover {
+  color: #000000;
+}
+
+.lightDanger {
+  background: none;
+  color: var(--red);
+  font-size: inherit;
+}
+
+.lightDanger:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.lightDanger:not(:disabled):hover {
+  color: darkred;
+}

@@ -1,0 +1,45 @@
+.section1Container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 4rem 0;
+    text-align: center;
+    align-items: center;
+    flex-shrink: none;
+}
+
+.title {
+    margin: 2rem 0;
+}
+
+.columns{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 3;
+    padding: 2%;
+    flex: 1 0 200px; /* flex: [grow] [shrink] [basis] */
+    margin: -1px;
+}
+
+.columnTitle {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(
+        to right,
+        #fff 0%,
+        #fff 10%,
+        var(--primary-color) 30%,
+        var(--primary-color) 70%,
+        #fff 90%,
+        #fff 100%
+    ) 1;
+}
+
+.columnText {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}

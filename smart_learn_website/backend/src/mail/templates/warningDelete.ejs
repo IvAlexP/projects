@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f4f4f5; padding: 20px; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    h1 { color: #e11d48; }
+    .button { display: inline-block; padding: 12px 24px; background-color: #2563eb; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 20px; }
+    .footer { margin-top: 30px; font-size: 12px; color: #6b7280; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Action Required: Your account will be deleted soon!</h1>
+    <p>Hi <strong><%= displayName %></strong>,</p>
+    <p>We noticed that you haven't been active on our flashcards app for almost a year.</p>
+    <p>To protect your data and free up space, inactive accounts are automatically deleted. If you don't log in within the next <strong>7 days</strong>, your account and all accumulated progress will be permanently deleted.</p>
+    <p>If you wish to keep your account, all you need to do is log in by clicking the button below:</p>
+    
+    <a href="<%= loginUrl %>" class="button">Log in to keep your account</a>
+    
+    <div class="footer">
+      If you received this email by mistake or have already been active recently, please ignore this message.
+    </div>
+  </div>
+</body>
+</html>
